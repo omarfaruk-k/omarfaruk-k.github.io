@@ -5,7 +5,7 @@
 author:
   name: Omar Faruk Khan
   image: author.png
-  greeting: "Aspiring Computer Science Student | Backend Enthusiast"
+  greeting: "CS Student | Backend Enthusiast"
   icon: ":wave:"
 
 ############################
@@ -13,7 +13,7 @@ author:
 ############################
 
 links:
-  - github: https://github.com/omarfaruk-k
+  - github: https://github.com/omarfaruk-k/
   # - link: https://github.com/omarfaruk-k/omarfaruk-k.github.io#readme
   # - website: 
   # - x-twitter: 
