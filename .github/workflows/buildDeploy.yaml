@@ -3,17 +3,17 @@
 name: Build & Deploy Hugo site to Pages
 
 # Will fire when a new release is published
-on:
-  release:
-    types: [published]
+# on:
+#   release:
+#     types: [published]
 
 # Change the above to this if you want to build and deploy on every push, but
 # be mindful of overuse. Free accounts have a limited amount of
 # compute time per month.
-# on:
-#   push:
-#     branches:
-#       - main
+on:
+  push:
+    branches:
+      - main
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
