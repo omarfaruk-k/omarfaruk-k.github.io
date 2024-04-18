@@ -1,6 +1,6 @@
 # omarfaruk-k.github.io
 
-Please follow the instructions below to finish the setup of your new Qubt site.
+<!-- Please follow the instructions below to finish the setup of your new Qubt site.
 
 ## Installation
 
@@ -122,4 +122,4 @@ Last step: Go to Settings -> Pages -> Build and deployment -> Set the Source to 
 Next time you publish a release this workflow will build and deploy your site :tada:
 
 Your site will be published to the following URL:
-`https://omarfaruk-k.github.io/omarfaruk-k.github.io`
+`https://omarfaruk-k.github.io/omarfaruk-k.github.io` -->
