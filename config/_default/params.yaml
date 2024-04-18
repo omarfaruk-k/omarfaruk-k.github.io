@@ -3,9 +3,9 @@
 ############################
 
 author:
-  name: omarfaruk-k
+  name: Omar Faruk Khan
   image: author.png
-  greeting: "Your new Qubt site :tada:"
+  greeting: "My new Qubt site :tada:"
   icon: ":wave:"
 
 ############################
@@ -14,11 +14,13 @@ author:
 
 links:
   - github: https://github.com/omarfaruk-k/omarfaruk-k.github.io
-  - link: https://github.com/omarfaruk-k/omarfaruk-k.github.io#readme
+  # - link: https://github.com/omarfaruk-k/omarfaruk-k.github.io#readme
   # - website: 
   # - x-twitter: 
   # - mastodon: 
-  # - linkedin: 
+  - linkedin: https://www.linkedin.com/in/omarfaruk-k/
+  - codeforces: https://codeforces.com/profile/omarfaruk
+  - hackerrank: https://www.hackerrank.com/profile/omarfaruk_k
   # - instagram: 
   # - reddit: 
   # - telegram: 
@@ -26,7 +28,7 @@ links:
   # - signal: 
   # - codepen: 
   # - dev: 
-  # - email: 
+  - email: omarfaruk.k.cs@gmail.com
   # - discord: 
   # - orcid: 
   # - slack: 
@@ -64,7 +66,7 @@ links:
 ## OpenGraph & Twitter Cards
 ###############################
 
-title: omarfaruk-k.github.io
+title: omarfaruk-k
 description: "Site build with Qubt & Hugo"
 images:
   - thumbnail.png
