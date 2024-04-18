@@ -1,34 +1,20 @@
-# Qubt - Template
+# omarfaruk-k.github.io
 
-This is the theme template repository! **Please** follow the installation instructions below.
-If you're looking for the actual theme repository, follow this [link](https://github.com/Chrede88/qubt).
+Please follow the instructions below to finish the setup of your new Qubt site.
 
 ## Installation
 
-1) Use this template by pressing `Use this template`. Don't fork this repository!
-2) Wait 20s-30s and update the page. The files in your repo are getting populated.
-3) Add a LICENSE to your repo.
-4) Clone your version of the template to your local computer:
+0) Add a LICENSE to your repo.
+1) Clone your version of the template to your local computer:
 ```shell
-git clone https://github.com/<username>/<reponame>
+git clone https://github.com/omarfaruk-k/omarfaruk-k.github.io
 ```
-5) Change the module name to match your github repo in `go.mod`.
-6) Modify `config/_default/hugo.yaml`, `config/_default/params.yaml` and `config/_default/menus.yaml` according to the configuration below.
-7) Add your blog posts to `content/blog/`. See example posts for reference.
-8) Modify `content/about.md` so it matches your preferences.
-9) All images are stored in the `assets/` folder. You can group in subfolders if you like.
-10) In a terminal/commandline window, move to the newly created folder using `cd`.
-11) Build a local version of your site by executing `hugo server`. You can see the site by navigating to `localhost:1313` (actual URL will be outputted in the CLI) in a browser.
-12) Add a new `icon.png` file to update the favicon. The png file should be 512px by 512px in size.
-
----
-
-## Features
-
-- Simple personal blog theme, designed for mobile-first.
-- Automatic dark mode (based on system setttings).
-- Emoji support for a fun design.
-- Healthcheck endpoint (/healthcheck.json).
+2) Change the module name to match your github repo in `go.mod`.
+3) Modify `config/_default/hugo.yaml` and `config/_default/params.yaml` according to the Configuration below.
+4) In a terminal/commandline, move to the newly created folder using `cd`.
+5) Build a local version of your site by executing `hugo server`. You can see the site by navigating to `http://localhost:1313/omarfaruk-k.github.io/` (actual URL will be outputted in the CLI) in a browser.
+6) Add a new image to the `assets/` folder, using the same name as you specified in `params.yaml`.
+7) Add a new `icon.png` file to update the favicon. The png file should be 512px by 512px in size.
 
 ---
 
@@ -38,7 +24,7 @@ All configuration is done in the four configuration files under `config/_default
 
 `hugo.yaml`:
 ```yaml
-baseURL: 'https://username.github.io/qubt'
+baseURL: 'https://omarfaruk-k.github.io/omarfaruk-k.github.io'
 title: 'Qubt Theme'
 ```
 
@@ -63,7 +49,7 @@ main:
 ############################
 
 author:
-  name: "Qubt"
+  name: omarfaruk-k
   image: author.jpeg
   greeting: "A personal blog theme for Hugo :evergreen_tree:"
   icon: ":wave:"
@@ -73,15 +59,15 @@ author:
 ############################
 
 links:
-  - github: https://github.com/username
-  - facebook: https://facebook.com/me
+  - github: https://github.com/omarfaruk-k/omarfaruk-k.github.io
+  - link: https://github.com/omarfaruk-k/omarfaruk-k.github.io#readme
  
 
 ###############################
 ## OpenGraph & Twitter Cards
 ###############################
 
-title: "Qubt Theme"
+title: omarfaruk-k.github.io
 description: "Demo site build with Qubt & Hugo"
 images:
   - thumbnail.jpeg
@@ -113,8 +99,6 @@ Users can provide their own icons by placing a `.svg` image in `./assets/icons/`
 
 ## Update the Theme Version
 
-This guide is left here for reference. Please check the [template](https://github.com/Chrede88/qubtTemplate#readme) repo for the most up-to-date documentation.
-
 The theme version used to build the site is defined in `go.mod` file.
 
 The best practice is to update to released and tested versions. To update to a specific version execute the following command in a terminal/commandline (at the root path of your site repo):
@@ -138,6 +122,4 @@ Last step: Go to Settings -> Pages -> Build and deployment -> Set the Source to 
 Next time you publish a release this workflow will build and deploy your site :tada:
 
 Your site will be published to the following URL:
-`https://<username>.github.io/<repo>`, where `<username>` and `<repo>` is your Github username and the name of your repository.
-
-
+`https://omarfaruk-k.github.io/omarfaruk-k.github.io`
