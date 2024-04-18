@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>omarfaruk-k</title>
+    <link>http://localhost:1313/omarfaruk-k.github.io/</link>
+    <description>Recent content on omarfaruk-k</description>
+    <generator>Hugo 0.125.0</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/omarfaruk-k.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/omarfaruk-k.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/omarfaruk-k.github.io/about/</guid>
+      <description>Hello!&#xA;I&amp;rsquo;m Omar Faruk, a dedicated Computer Science student with a keen interest in backend development. With a passion for learning and a thirst for exploration, I&amp;rsquo;m always eager to delve into new technologies and tackle exciting challenges.&#xA;My journey in the world of technology has been fueled by a relentless curiosity and a drive to understand complex systems. Whether it&amp;rsquo;s mastering a new programming language or diving deep into database management, I thrive on the thrill of discovery.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/omarfaruk-k.github.io/blog/post1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/omarfaruk-k.github.io/blog/post1/</guid>
+      <description> </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/omarfaruk-k.github.io/blog/post2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/omarfaruk-k.github.io/blog/post2/</guid>
+      <description> </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/omarfaruk-k.github.io/blog/post3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/omarfaruk-k.github.io/blog/post3/</guid>
+      <description> </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/omarfaruk-k.github.io/blog/post4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/omarfaruk-k.github.io/blog/post4/</guid>
+      <description> </description>
+    </item>
+  </channel>
+</rss>
