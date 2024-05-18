@@ -5,7 +5,7 @@
 author:
   name: Omar Faruk Khan
   image: author.png
-  greeting: "CS Student | Backend Enthusiast"
+  greeting: "Software Engineer | Backend Enthusiast"
   icon: ":wave:"
 
 ############################
@@ -14,6 +14,7 @@ author:
 
 links:
   - github: https://github.com/omarfaruk-k/
+  - email: mailto:omarfaruk.k.cs@gmail.com
   # - link: https://github.com/omarfaruk-k/omarfaruk-k.github.io#readme
   # - website: 
   # - x-twitter: 
@@ -27,8 +28,7 @@ links:
   # - whatsapp: 
   # - signal: 
   # - codepen: 
-  # - dev: 
-  - email: mailto:omarfaruk.k.cs@gmail.com
+  - dev: https://dev.to/omarfaruk-k
   # - discord: 
   # - orcid: 
   # - slack: 
@@ -54,7 +54,7 @@ links:
   # - strava: 
   # - untappd: 
   # - skype: 
-  # - medium: 
+  - medium: https://omarfaruk-k.medium.com/
   # - foursquare: 
   # - apple: 
   # - amazon:
