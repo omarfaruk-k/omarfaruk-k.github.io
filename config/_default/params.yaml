@@ -4,7 +4,7 @@
 
 author:
   name: Omar Faruk Khan
-  image: author.png
+  image: author.jpg
   greeting: "Software Engineer | Backend Enthusiast"
   icon: ":wave:"
 
@@ -72,4 +72,4 @@ links:
 title: omarfaruk-k
 description: "Site build with Qubt & Hugo"
 images:
-  - thumbnail.png
+  - author.jpg
