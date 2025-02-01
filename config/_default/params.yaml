@@ -73,3 +73,9 @@ title: omarfaruk-k
 description: "Site build with Qubt & Hugo"
 images:
   - author.jpg
+
+
+
+gtag:
+  enable: true
+  id: 'G-4QP733SWSX'
