@@ -1,1067 +1,645 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" data-theme="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Omar Faruk Khan — Software Engineer</title>
-    <meta
-      name="description"
-      content="Omar Faruk Khan — Software Engineer skilled in JavaScript, Python, Java, React, Node.js, Django, Flutter, Docker, and GCP. Based in Bangladesh."
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Omar Faruk Khan — Software Engineer</title>
+  <meta name="description" content="Omar Faruk Khan — Software Engineer skilled in JavaScript, Python, Java, React, Node.js, Django, Flutter, Docker, and GCP. Based in Bangladesh." />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@300;400;500;700&family=DM+Sans:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@300;400;500;700&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
 
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- ── SCROLL PROGRESS BAR ── -->
-    <div id="progress-bar"></div>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-    <!-- ============================================================
+  <!-- ── SCROLL PROGRESS BAR ── -->
+  <div id="progress-bar"></div>
+
+
+  <!-- ============================================================
        NAVIGATION
   ============================================================ -->
-    <nav>
-      <a href="#hero" class="nav-logo">omarfaruk-k</a>
+  <nav>
+    <a href="#hero" class="nav-logo">omarfaruk-k</a>
 
-      <ul class="nav-links">
-        <li><a href="#about">about</a></li>
-        <li><a href="#skills">skills</a></li>
-        <li><a href="#experience">experience</a></li>
-        <li><a href="#projects">projects</a></li>
-        <li><a href="#blog">blog</a></li>
-        <li><a href="#contact">contact</a></li>
-      </ul>
+    <ul class="nav-links">
+      <li><a href="#about">about</a></li>
+      <li><a href="#skills">skills</a></li>
+      <li><a href="#experience">experience</a></li>
+      <li><a href="#projects">projects</a></li>
+      <li><a href="#blog">blog</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
 
-      <div style="display: flex; align-items: right; gap: 0.75rem">
-        <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
-          ☀️
-        </button>
-        <button class="hamburger" id="hamburger" aria-label="Open mobile menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </nav>
-
-    <!-- Mobile dropdown menu -->
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="#about">about</a>
-      <a href="#skills">skills</a>
-      <a href="#experience">experience</a>
-      <a href="#projects">projects</a>
-      <a href="#blog">blog</a>
-      <a href="#contact">contact</a>
+    <div class="nav-actions">
+      <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">☀️</button>
+      <button class="hamburger" id="hamburger" aria-label="Open mobile menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
+  </nav>
 
-    <!-- ============================================================
-       HERO
+  <!-- Mobile dropdown menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about">about</a>
+    <a href="#skills">skills</a>
+    <a href="#experience">experience</a>
+    <a href="#projects">projects</a>
+    <a href="#blog">blog</a>
+    <a href="#contact">contact</a>
+  </div>
+
+
+  <!-- ============================================================
+       HERO — centered portrait layout
   ============================================================ -->
-    <section id="hero">
-      <div class="bg-orb orb1"></div>
-      <div class="bg-orb orb2"></div>
+  <section id="hero">
+    <div class="bg-orb orb1"></div>
+    <div class="bg-orb orb2"></div>
 
-      <div class="container">
-        <div class="hero-grid">
-          <!-- Left: text -->
-          <div>
-            <div class="hero-eyebrow">Open to opportunities</div>
+    <div class="container">
+      <div class="hero-centered">
 
-            <h1 class="hero-name">Omar<br /><em>Faruk</em> Khan</h1>
-
-            <p class="hero-sub">
-              Software Engineer building scalable web apps &amp; mobile
-              experiences with <strong>JavaScript</strong>,
-              <strong>Python</strong>, <strong>Java</strong>, and
-              <strong>Flutter</strong>. Passionate about clean architecture and
-              real-world impact.
-            </p>
-
-            <!-- Social icon row (matches screenshot style) -->
-            <div class="hero-social-row">
-              <!-- GitHub -->
-              <a
-                class="hero-social-icon"
-                href="https://github.com/omarfaruk-k/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-              >
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"
-                  />
-                </svg>
-              </a>
-
-              <!-- Email -->
-              <a
-                class="hero-social-icon"
-                href="mailto:omarfaruk.k.cs@gmail.com"
-                aria-label="Email"
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path
-                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-                  />
-                  <polyline points="22,6 12,13 2,6" />
-                </svg>
-              </a>
-
-              <!-- LinkedIn -->
-              <a
-                class="hero-social-icon"
-                href="https://www.linkedin.com/in/omarfaruk-k/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-              >
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"
-                  />
-                  <circle cx="4" cy="4" r="2" />
-                </svg>
-              </a>
-
-              <!-- Codeforces -->
-              <a
-                class="hero-social-icon"
-                href="https://codeforces.com/profile/omarfaruk"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Codeforces"
-              >
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M4.5 7.5A1.5 1.5 0 0 1 6 9v10.5A1.5 1.5 0 0 1 4.5 21h-3C.673 21 0 20.328 0 19.5V9c0-.828.673-1.5 1.5-1.5h3zm9-4.5A1.5 1.5 0 0 1 15 4.5v15a1.5 1.5 0 0 1-1.5 1.5h-3c-.827 0-1.5-.672-1.5-1.5v-15c0-.828.673-1.5 1.5-1.5h3zm9 7.5A1.5 1.5 0 0 1 24 12v7.5a1.5 1.5 0 0 1-1.5 1.5h-3a1.5 1.5 0 0 1-1.5-1.5V12a1.5 1.5 0 0 1 1.5-1.5h3z"
-                  />
-                </svg>
-              </a>
-
-              <!-- HackerRank -->
-              <a
-                class="hero-social-icon"
-                href="https://www.hackerrank.com/profile/omarfaruk_k"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="HackerRank"
-              >
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-.188 17.98c-.34 0-.635-.14-.832-.37l-2.18-2.7v2.6c0 .256-.207.47-.467.47H6.7c-.26 0-.467-.214-.467-.47V6.49c0-.256.207-.47.467-.47h1.633c.26 0 .467.214.467.47v2.6l2.18-2.7c.197-.23.493-.37.832-.37h1.98c.47 0 .712.547.385.893l-2.9 3.107 2.9 3.108c.327.346.085.893-.385.893h-1.98zm5.88 0h-1.634c-.26 0-.466-.214-.466-.47v-4.02h-1.5v4.02c0 .256-.207.47-.467.47h-1.634c-.26 0-.466-.214-.466-.47V6.49c0-.256.207-.47.466-.47h1.634c.26 0 .467.214.467.47v4.02h1.5V6.49c0-.256.207-.47.466-.47h1.634c.26 0 .467.214.467.47v11.02c0 .256-.207.47-.467.47z"
-                  />
-                </svg>
-              </a>
-
-              <!-- dev.to -->
-              <a
-                class="hero-social-icon"
-                href="https://dev.to/omarfaruk-k"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="dev.to"
-              >
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M7.42 10.05c-.18-.16-.46-.23-.84-.23H6l.02 2.44.04 2.45.56-.02c.41 0 .63-.07.83-.26.24-.24.26-.36.26-2.2 0-1.91-.02-1.96-.29-2.18zM0 4.94v14.12h24V4.94H0zM8.56 15.3c-.44.58-1.06.77-2.53.77H4.71V8.53h1.4c1.67 0 2.16.18 2.6.9.27.43.29.6.32 2.57.05 2.23-.02 2.73-.47 3.3zm5.09-5.47h-2.47v1.77h1.52v1.28l-.72.04-.75.03v1.77l1.22.03 1.2.04v1.28h-1.6c-1.53 0-1.6-.01-1.87-.3l-.3-.28v-3.16c0-3.02.01-3.18.25-3.48.23-.31.25-.31 1.88-.31h1.64v1.28zm4.68 5.45c-.17.43-.64.79-1 .79-.18 0-.45-.15-.67-.39-.32-.32-.45-.63-.82-2.08l-.9-3.39-.45-1.67h.76c.4 0 .75.02.75.05 0 .06 1.16 4.54 1.26 4.83.04.15.32-.7.73-2.3l.62-2.51.76-.03c.41-.02.75 0 .75.05 0 .05-.29 1.13-.64 2.41-.35 1.28-.7 2.61-.77 2.93-.07.32-.2.7-.38 1.22z"
-                  />
-                </svg>
-              </a>
-
-              <!-- Medium -->
-              <a
-                class="hero-social-icon"
-                href="https://omarfaruk-k.medium.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Medium"
-              >
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"
-                  />
-                </svg>
-              </a>
-            </div>
-            <!-- end hero-social-row -->
-
-            <!-- CTA buttons -->
-            <div class="hero-ctas">
-              <a href="#projects" class="btn btn-primary">
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.5"
-                >
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                  <polyline points="22 4 12 14.01 9 11.01" />
-                </svg>
-                View Projects
-              </a>
-              <a href="#contact" class="btn btn-outline">Get in Touch</a>
-            </div>
-          </div>
-
-          <!-- Right: avatar -->
-          <div class="hero-visual">
-            <div class="hero-avatar-wrap">
-              <div class="hero-avatar-ring"></div>
-              <!--
-              Replace the src below with your actual photo.
-              The photo from your current site is: author.jpg
-              Place it in the same folder as this HTML file.
-            -->
-              <img
-                class="hero-avatar"
-                src="author.jpg"
-                alt="Omar Faruk Khan"
-                onerror="
-                  this.style.display = 'none';
-                  this.nextElementSibling.style.display = 'flex';
-                "
-              />
-              <!-- Fallback initial if image missing -->
-              <div
-                class="hero-avatar"
-                style="
-                  display: none;
-                  font-family: &quot;DM Serif Display&quot;, serif;
-                  font-size: 5rem;
-                  color: var(--accent);
-                  align-items: center;
-                  justify-content: center;
-                "
-              >
-                O
-              </div>
-            </div>
-
-            <div class="hero-badges">
-              <div class="hero-badge">
-                <span class="dot"></span>Node.js / Express
-              </div>
-              <div class="hero-badge">
-                <span class="dot"></span>Python / Django
-              </div>
-              <div class="hero-badge">
-                <span class="dot"></span>React &amp; Flutter
-              </div>
-              <div class="hero-badge">
-                <span class="dot"></span>Docker / GCP
-              </div>
-            </div>
-          </div>
+        <!-- Avatar -->
+        <div class="hero-avatar-wrap">
+          <div class="hero-avatar-ring"></div>
+          <img
+            class="hero-avatar"
+            src="assets/author.jpg"
+            alt="Omar Faruk Khan"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+          />
+          <!-- Fallback if image missing -->
+          <div class="hero-avatar hero-avatar-fallback">O</div>
+          <!-- Wave emoji badge -->
+          <div class="hero-wave">👋</div>
         </div>
-        <!-- end hero-grid -->
-      </div>
-    </section>
 
-    <hr class="divider" />
+        <!-- Name -->
+        <h1 class="hero-name-centered">Omar Faruk Khan</h1>
 
-    <!-- ============================================================
+        <!-- One-liner bio -->
+        <p class="hero-bio">Software Engineer · Backend Enthusiast</p>
+
+        <!-- Social icon row -->
+        <div class="hero-social-row">
+
+          <a class="hero-social-icon" title="GitHub" href="https://github.com/omarfaruk-k/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          </a>
+
+          <a class="hero-social-icon" title="Email" href="mailto:omarfaruk.k.cs@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+
+          <a class="hero-social-icon" title="LinkedIn" href="https://www.linkedin.com/in/omarfaruk-k/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+
+          <a class="hero-social-icon" title="Codeforces" href="https://codeforces.com/profile/omarfaruk" target="_blank" rel="noopener noreferrer" aria-label="Codeforces">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.5 7.5A1.5 1.5 0 0 1 6 9v10.5A1.5 1.5 0 0 1 4.5 21h-3C.673 21 0 20.328 0 19.5V9c0-.828.673-1.5 1.5-1.5h3zm9-4.5A1.5 1.5 0 0 1 15 4.5v15a1.5 1.5 0 0 1-1.5 1.5h-3c-.827 0-1.5-.672-1.5-1.5v-15c0-.828.673-1.5 1.5-1.5h3zm9 7.5A1.5 1.5 0 0 1 24 12v7.5a1.5 1.5 0 0 1-1.5 1.5h-3a1.5 1.5 0 0 1-1.5-1.5V12a1.5 1.5 0 0 1 1.5-1.5h3z"/></svg>
+          </a>
+
+          <a class="hero-social-icon" title="Hackerrank" href="https://www.hackerrank.com/profile/omarfaruk_k" target="_blank" rel="noopener noreferrer" aria-label="HackerRank">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-.188 17.98c-.34 0-.635-.14-.832-.37l-2.18-2.7v2.6c0 .256-.207.47-.467.47H6.7c-.26 0-.467-.214-.467-.47V6.49c0-.256.207-.47.467-.47h1.633c.26 0 .467.214.467.47v2.6l2.18-2.7c.197-.23.493-.37.832-.37h1.98c.47 0 .712.547.385.893l-2.9 3.107 2.9 3.108c.327.346.085.893-.385.893h-1.98zm5.88 0h-1.634c-.26 0-.466-.214-.466-.47v-4.02h-1.5v4.02c0 .256-.207.47-.467.47h-1.634c-.26 0-.466-.214-.466-.47V6.49c0-.256.207-.47.466-.47h1.634c.26 0 .467.214.467.47v4.02h1.5V6.49c0-.256.207-.47.466-.47h1.634c.26 0 .467.214.467.47v11.02c0 .256-.207.47-.467.47z"/></svg>
+          </a>
+
+          <a class="hero-social-icon" title="Dev.to" href="https://dev.to/omarfaruk-k" target="_blank" rel="noopener noreferrer" aria-label="dev.to">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.42 10.05c-.18-.16-.46-.23-.84-.23H6l.02 2.44.04 2.45.56-.02c.41 0 .63-.07.83-.26.24-.24.26-.36.26-2.2 0-1.91-.02-1.96-.29-2.18zM0 4.94v14.12h24V4.94H0zM8.56 15.3c-.44.58-1.06.77-2.53.77H4.71V8.53h1.4c1.67 0 2.16.18 2.6.9.27.43.29.6.32 2.57.05 2.23-.02 2.73-.47 3.3zm5.09-5.47h-2.47v1.77h1.52v1.28l-.72.04-.75.03v1.77l1.22.03 1.2.04v1.28h-1.6c-1.53 0-1.6-.01-1.87-.3l-.3-.28v-3.16c0-3.02.01-3.18.25-3.48.23-.31.25-.31 1.88-.31h1.64v1.28zm4.68 5.45c-.17.43-.64.79-1 .79-.18 0-.45-.15-.67-.39-.32-.32-.45-.63-.82-2.08l-.9-3.39-.45-1.67h.76c.4 0 .75.02.75.05 0 .06 1.16 4.54 1.26 4.83.04.15.32-.7.73-2.3l.62-2.51.76-.03c.41-.02.75 0 .75.05 0 .05-.29 1.13-.64 2.41-.35 1.28-.7 2.61-.77 2.93-.07.32-.2.7-.38 1.22z"/></svg>
+          </a>
+
+          <a class="hero-social-icon" title="Medium" href="https://omarfaruk-k.medium.com/" target="_blank" rel="noopener noreferrer" aria-label="Medium">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+          </a>
+
+        </div><!-- end hero-social-row -->
+        <!-- CTA -->
+<a href="#projects" class="btn btn-primary" style="margin-top:0.4rem;">
+  View My Work
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+</a>
+
+<!-- Scroll hint -->
+<div class="hero-scroll-hint">
+  <span>scroll</span>
+  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+</div>
+
+      </div><!-- end hero-centered -->
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+
+  <!-- ============================================================
        ABOUT
   ============================================================ -->
-    <section id="about">
-      <div class="container">
-        <div class="about-grid">
-          <!-- Left: bio + stats -->
-          <div class="reveal">
-            <div class="section-tag">About Me</div>
-            <h2 class="section-title">
-              Engineer by craft,<br /><em>builder</em> by passion
-            </h2>
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
 
-            <div class="about-text">
-              <p>
-                I'm <strong>Omar Faruk Khan</strong>, a Computer Science student
-                at <strong>Leading University, Sylhet</strong>, graduating
-                December 2025. I specialise in full-stack web and cross-platform
-                mobile development, with a strong interest in clean architecture
-                and scalable backend systems.
-              </p>
-              <p>
-                I've built production-ready apps using
-                <strong>JavaScript (Node.js, React)</strong>,
-                <strong>Python (Django, Flask)</strong>, <strong>Java</strong>,
-                and <strong>Flutter</strong>. I care about writing code that's
-                maintainable, tested, and actually ships.
-              </p>
-              <p>
-                Outside of work I enjoy competitive programming, writing
-                technical articles, and exploring new frameworks. I also mentor
-                peers in data structures and algorithms.
-              </p>
-            </div>
+        <!-- Left: bio + stats -->
+        <div class="reveal">
+          <div class="section-tag">About Me</div>
+          <h2 class="section-title">Engineer by craft,<br /><em>builder</em> by passion</h2>
 
-            <div class="about-stats">
-              <div class="stat-box">
-                <div class="stat-num">3+</div>
-                <div class="stat-label">PROJECTS SHIPPED</div>
-              </div>
-              <div class="stat-box">
-                <div class="stat-num">5+</div>
-                <div class="stat-label">TECH STACKS</div>
-              </div>
-              <div class="stat-box">
-                <div class="stat-num">5.0</div>
-                <div class="stat-label">HSC / SSC GPA</div>
-              </div>
-              <div class="stat-box">
-                <div class="stat-num">∞</div>
-                <div class="stat-label">PROBLEMS SOLVED</div>
-              </div>
-            </div>
+          <div class="about-text">
+            <p>
+              I'm <strong>Omar Faruk Khan</strong>, a Computer Science student at
+              <strong>Leading University, Sylhet</strong>, graduating December 2025.
+              I specialise in full-stack web and cross-platform mobile development,
+              with a strong interest in clean architecture and scalable backend systems.
+            </p>
+            <p>
+              I've built production-ready apps using <strong>JavaScript (Node.js, React)</strong>,
+              <strong>Python (Django, Flask)</strong>, <strong>Java</strong>, and
+              <strong>Flutter</strong>. I care about writing code that's maintainable,
+              tested, and actually ships.
+            </p>
+            <p>
+              Outside of work I enjoy competitive programming, writing technical articles,
+              and exploring new frameworks. I also mentor peers in data structures and algorithms.
+            </p>
           </div>
 
-          <!-- Right: quick info + socials -->
-          <div class="about-right reveal" style="transition-delay: 0.15s">
-            <h3>Quick Info</h3>
-            <ul class="info-list">
-              <li><span>Location</span><span>Sylhet, Bangladesh 🇧🇩</span></li>
-              <li><span>Degree</span><span>B.Sc. Computer Science</span></li>
-              <li><span>Graduating</span><span>December 2025</span></li>
-              <li><span>Focus</span><span>Full Stack &amp; Mobile</span></li>
-              <li><span>Email</span><span>omarfaruk.k.cs@gmail.com</span></li>
-              <li>
-                <span>Status</span
-                ><span style="color: var(--accent)">Open to work ✦</span>
-              </li>
-            </ul>
-
-            <h3>Find me on</h3>
-            <div class="social-row">
-              <a
-                class="social-chip"
-                href="https://github.com/omarfaruk-k/"
-                target="_blank"
-                rel="noopener"
-              >
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"
-                  />
-                </svg>
-                GitHub
-              </a>
-              <a
-                class="social-chip"
-                href="https://www.linkedin.com/in/omarfaruk-k/"
-                target="_blank"
-                rel="noopener"
-              >
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"
-                  />
-                  <circle cx="4" cy="4" r="2" />
-                </svg>
-                LinkedIn
-              </a>
-              <a
-                class="social-chip"
-                href="https://codeforces.com/profile/omarfaruk"
-                target="_blank"
-                rel="noopener"
-                >⚡ Codeforces</a
-              >
-              <a
-                class="social-chip"
-                href="https://www.hackerrank.com/profile/omarfaruk_k"
-                target="_blank"
-                rel="noopener"
-                >⬡ HackerRank</a
-              >
-              <a
-                class="social-chip"
-                href="https://dev.to/omarfaruk-k"
-                target="_blank"
-                rel="noopener"
-                >▲ dev.to</a
-              >
-              <a
-                class="social-chip"
-                href="https://omarfaruk-k.medium.com/"
-                target="_blank"
-                rel="noopener"
-                >● Medium</a
-              >
+          <div class="about-stats">
+            <div class="stat-box">
+              <div class="stat-num">3+</div>
+              <div class="stat-label">PROJECTS SHIPPED</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num">5+</div>
+              <div class="stat-label">TECH STACKS</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num">5.0</div>
+              <div class="stat-label">HSC / SSC GPA</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num">∞</div>
+              <div class="stat-label">PROBLEMS SOLVED</div>
             </div>
           </div>
         </div>
+
+        <!-- Right: quick info + socials -->
+        <div class="about-right reveal" style="transition-delay: 0.15s">
+          <h3>Quick Info</h3>
+          <ul class="info-list">
+            <li><span>Location</span><span>Sylhet, Bangladesh 🇧🇩</span></li>
+            <li><span>Degree</span><span>B.Sc. Computer Science</span></li>
+            <li><span>Graduating</span><span>December 2025</span></li>
+            <li><span>Focus</span><span>Full Stack &amp; Mobile</span></li>
+            <li><span>Email</span><span>omarfaruk.k.cs@gmail.com</span></li>
+            <li><span>Status</span><span style="color:var(--accent)">Open to work ✦</span></li>
+          </ul>
+
+          <h3>Find me on</h3>
+          <div class="social-row">
+            <a class="social-chip" href="https://github.com/omarfaruk-k/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              GitHub
+            </a>
+            <a class="social-chip" href="https://www.linkedin.com/in/omarfaruk-k/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+            <a class="social-chip" href="https://codeforces.com/profile/omarfaruk" target="_blank" rel="noopener">⚡ Codeforces</a>
+            <a class="social-chip" href="https://www.hackerrank.com/profile/omarfaruk_k" target="_blank" rel="noopener">⬡ HackerRank</a>
+            <a class="social-chip" href="https://dev.to/omarfaruk-k" target="_blank" rel="noopener">▲ dev.to</a>
+            <a class="social-chip" href="https://omarfaruk-k.medium.com/" target="_blank" rel="noopener">● Medium</a>
+          </div>
+        </div>
+
       </div>
-    </section>
+    </div>
+  </section>
 
-    <hr class="divider" />
+  <hr class="divider" />
 
-    <!-- ============================================================
+
+  <!-- ============================================================
        SKILLS
   ============================================================ -->
-    <section id="skills">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="section-tag">Skills</div>
-          <h2 class="section-title">Tools of the trade</h2>
-          <p class="section-desc">
-            Technologies I use across web, mobile, and infrastructure — from
-            daily drivers to specialised tools.
-          </p>
-        </div>
-
-        <div class="skills-grid">
-          <div class="skill-card reveal">
-            <div class="skill-card-icon">⚙️</div>
-            <div class="skill-card-title">Languages</div>
-            <div class="tech-tags">
-              <span class="tech-tag">JavaScript</span>
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Java</span>
-              <span class="tech-tag">C++</span>
-              <span class="tech-tag">SQL</span>
-              <span class="tech-tag">HTML / CSS</span>
-              <span class="tech-tag">Dart</span>
-            </div>
-          </div>
-
-          <div class="skill-card reveal" style="transition-delay: 0.08s">
-            <div class="skill-card-icon">🎨</div>
-            <div class="skill-card-title">Frontend</div>
-            <div class="tech-tags">
-              <span class="tech-tag">React.js</span>
-              <span class="tech-tag">Tailwind CSS</span>
-              <span class="tech-tag">Bootstrap</span>
-              <span class="tech-tag">Sass</span>
-              <span class="tech-tag">HTML / CSS</span>
-            </div>
-          </div>
-
-          <div class="skill-card reveal" style="transition-delay: 0.16s">
-            <div class="skill-card-icon">🖥️</div>
-            <div class="skill-card-title">Backend</div>
-            <div class="tech-tags">
-              <span class="tech-tag">Node.js</span>
-              <span class="tech-tag">Express.js</span>
-              <span class="tech-tag">Django</span>
-              <span class="tech-tag">Flask</span>
-              <span class="tech-tag">REST APIs</span>
-            </div>
-          </div>
-
-          <div class="skill-card reveal" style="transition-delay: 0.24s">
-            <div class="skill-card-icon">📱</div>
-            <div class="skill-card-title">Mobile</div>
-            <div class="tech-tags">
-              <span class="tech-tag">Flutter</span>
-              <span class="tech-tag">React Native</span>
-              <span class="tech-tag">Android (Java)</span>
-              <span class="tech-tag">Firebase</span>
-            </div>
-          </div>
-
-          <div class="skill-card reveal" style="transition-delay: 0.32s">
-            <div class="skill-card-icon">🗄️</div>
-            <div class="skill-card-title">Databases</div>
-            <div class="tech-tags">
-              <span class="tech-tag">MySQL</span>
-              <span class="tech-tag">PostgreSQL</span>
-              <span class="tech-tag">MongoDB</span>
-              <span class="tech-tag">Firebase</span>
-              <span class="tech-tag">Firestore</span>
-            </div>
-          </div>
-
-          <div class="skill-card reveal" style="transition-delay: 0.4s">
-            <div class="skill-card-icon">☁️</div>
-            <div class="skill-card-title">DevOps &amp; Cloud</div>
-            <div class="tech-tags">
-              <span class="tech-tag">Docker</span>
-              <span class="tech-tag">Google Cloud</span>
-              <span class="tech-tag">GitHub Actions</span>
-              <span class="tech-tag">Git</span>
-              <span class="tech-tag">Postman</span>
-            </div>
-          </div>
-        </div>
+  <section id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Skills</div>
+        <h2 class="section-title">Tools of the trade</h2>
+        <p class="section-desc">Technologies I use across web, mobile, and infrastructure — from daily drivers to specialised tools.</p>
       </div>
-    </section>
 
-    <hr class="divider" />
+      <div class="skills-grid">
 
-    <!-- ============================================================
+        <div class="skill-card reveal">
+          <div class="skill-card-icon">⚙️</div>
+          <div class="skill-card-title">Languages</div>
+          <div class="tech-tags">
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">C++</span>
+            <span class="tech-tag">SQL</span>
+            <span class="tech-tag">HTML / CSS</span>
+            <span class="tech-tag">Dart</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" style="transition-delay: 0.08s">
+          <div class="skill-card-icon">🎨</div>
+          <div class="skill-card-title">Frontend</div>
+          <div class="tech-tags">
+            <span class="tech-tag">React.js</span>
+            <span class="tech-tag">Tailwind CSS</span>
+            <span class="tech-tag">Bootstrap</span>
+            <span class="tech-tag">Sass</span>
+            <span class="tech-tag">HTML / CSS</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" style="transition-delay: 0.16s">
+          <div class="skill-card-icon">🖥️</div>
+          <div class="skill-card-title">Backend</div>
+          <div class="tech-tags">
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Express.js</span>
+            <span class="tech-tag">Django</span>
+            <span class="tech-tag">Flask</span>
+            <span class="tech-tag">REST APIs</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" style="transition-delay: 0.24s">
+          <div class="skill-card-icon">📱</div>
+          <div class="skill-card-title">Mobile</div>
+          <div class="tech-tags">
+            <span class="tech-tag">Flutter</span>
+            <span class="tech-tag">React Native</span>
+            <span class="tech-tag">Android (Java)</span>
+            <span class="tech-tag">Firebase</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" style="transition-delay: 0.32s">
+          <div class="skill-card-icon">🗄️</div>
+          <div class="skill-card-title">Databases</div>
+          <div class="tech-tags">
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag">Firebase</span>
+            <span class="tech-tag">Firestore</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" style="transition-delay: 0.40s">
+          <div class="skill-card-icon">☁️</div>
+          <div class="skill-card-title">DevOps &amp; Cloud</div>
+          <div class="tech-tags">
+            <span class="tech-tag">Docker</span>
+            <span class="tech-tag">Google Cloud</span>
+            <span class="tech-tag">GitHub Actions</span>
+            <span class="tech-tag">Git</span>
+            <span class="tech-tag">Postman</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+
+  <!-- ============================================================
        EXPERIENCE / EDUCATION TIMELINE
   ============================================================ -->
-    <section id="experience">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="section-tag">Experience &amp; Education</div>
-          <h2 class="section-title">My journey so far</h2>
-          <p class="section-desc">
-            Academic background and key milestones that shaped how I build
-            software.
-          </p>
-        </div>
-
-        <div class="timeline">
-          <!-- Add your work experience here when you have it -->
-          <!-- Example entry shown below — replace with real roles -->
-
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">2024 — Present</div>
-            <div class="timeline-role">Software Developer (Projects)</div>
-            <div class="timeline-company">
-              Self-directed · Personal &amp; Team Projects
-            </div>
-            <p class="timeline-desc">
-              Building and shipping full-stack web apps and cross-platform
-              mobile applications. Working across the stack — from Firebase
-              backend design to React frontends and Flutter mobile apps.
-            </p>
-            <div class="timeline-tags">
-              <span class="timeline-tag">Flutter</span>
-              <span class="timeline-tag">Firebase</span>
-              <span class="timeline-tag">React</span>
-              <span class="timeline-tag">Node.js</span>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">2021 — Dec 2025</div>
-            <div class="timeline-role">
-              B.Sc. in Computer Science &amp; Engineering
-            </div>
-            <div class="timeline-company">
-              Leading University · Sylhet, Bangladesh
-            </div>
-            <ul class="timeline-bullets">
-              <li>
-                Specialising in algorithms, data structures, software
-                engineering, and mobile development.
-              </li>
-              <li>
-                Completed projects in mobile (Java/Android, Flutter) and web
-                (Node.js, React, Django).
-              </li>
-              <li>
-                Active participant in programming contests and hackathons.
-              </li>
-            </ul>
-            <div class="timeline-tags">
-              <span class="timeline-tag">Algorithms</span>
-              <span class="timeline-tag">Data Structures</span>
-              <span class="timeline-tag">Software Engineering</span>
-              <span class="timeline-tag">Mobile Dev</span>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">Completed</div>
-            <div class="timeline-role">
-              Higher Secondary Certificate (HSC) — Science
-            </div>
-            <div class="timeline-company">KMSI College · GPA 5.00 / 5.00</div>
-            <p class="timeline-desc">
-              Graduated with a perfect GPA in the Science stream, laying the
-              foundation in mathematics and physics.
-            </p>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">Completed</div>
-            <div class="timeline-role">
-              Secondary School Certificate (SSC) — Science
-            </div>
-            <div class="timeline-company">
-              Madhabpur Pilot High School · GPA 5.00 / 5.00
-            </div>
-            <p class="timeline-desc">
-              Achieved perfect GPA in the national secondary exam in the Science
-              stream.
-            </p>
-          </div>
-        </div>
+  <section id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Experience &amp; Education</div>
+        <h2 class="section-title">My journey so far</h2>
+        <p class="section-desc">Academic background and key milestones that shaped how I build software.</p>
       </div>
-    </section>
 
-    <hr class="divider" />
+      <div class="timeline">
 
-    <!-- ============================================================
+        <!-- Add your work experience here when you have it -->
+        <!-- Example entry shown below — replace with real roles -->
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2024 — Present</div>
+          <div class="timeline-role">Software Developer (Projects)</div>
+          <div class="timeline-company">Self-directed · Personal &amp; Team Projects</div>
+          <p class="timeline-desc">
+            Building and shipping full-stack web apps and cross-platform mobile applications.
+            Working across the stack — from Firebase backend design to React frontends and
+            Flutter mobile apps.
+          </p>
+          <div class="timeline-tags">
+            <span class="timeline-tag">Flutter</span>
+            <span class="timeline-tag">Firebase</span>
+            <span class="timeline-tag">React</span>
+            <span class="timeline-tag">Node.js</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2021 — Dec 2025</div>
+          <div class="timeline-role">B.Sc. in Computer Science &amp; Engineering</div>
+          <div class="timeline-company">Leading University · Sylhet, Bangladesh</div>
+          <ul class="timeline-bullets">
+            <li>Specialising in algorithms, data structures, software engineering, and mobile development.</li>
+            <li>Completed projects in mobile (Java/Android, Flutter) and web (Node.js, React, Django).</li>
+            <li>Active participant in programming contests and hackathons.</li>
+          </ul>
+          <div class="timeline-tags">
+            <span class="timeline-tag">Algorithms</span>
+            <span class="timeline-tag">Data Structures</span>
+            <span class="timeline-tag">Software Engineering</span>
+            <span class="timeline-tag">Mobile Dev</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Completed</div>
+          <div class="timeline-role">Higher Secondary Certificate (HSC) — Science</div>
+          <div class="timeline-company">KMSI College · GPA 5.00 / 5.00</div>
+          <p class="timeline-desc">Graduated with a perfect GPA in the Science stream, laying the foundation in mathematics and physics.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Completed</div>
+          <div class="timeline-role">Secondary School Certificate (SSC) — Science</div>
+          <div class="timeline-company">Madhabpur Pilot High School · GPA 5.00 / 5.00</div>
+          <p class="timeline-desc">Achieved perfect GPA in the national secondary exam in the Science stream.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+
+  <!-- ============================================================
        PROJECTS
   ============================================================ -->
-    <section id="projects">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="section-tag">Projects</div>
-          <h2 class="section-title">Things I've built</h2>
-          <p class="section-desc">
-            A selection of projects — mobile apps, web platforms, and games. All
-            built and shipped end-to-end.
-          </p>
-        </div>
-
-        <div class="projects-grid">
-          <!-- Project 1: redBond -->
-          <div class="project-card reveal">
-            <div
-              class="project-img"
-              style="
-                background: linear-gradient(135deg, #1a0a0a 0%, #2a0e0e 100%);
-              "
-            >
-              🩸
-              <span class="project-img-label">MOBILE · ANDROID</span>
-            </div>
-            <div class="project-body">
-              <h3 class="project-title">redBond — Blood Donation App</h3>
-              <p class="project-desc">
-                A real-time mobile app connecting blood donors and recipients,
-                addressing emergency response delays in Bangladesh.
-              </p>
-              <ul class="project-bullets">
-                <li>
-                  Led backend development in a team of 3; designed Firebase data
-                  architecture for user profiles, blood requests, and donor
-                  history.
-                </li>
-                <li>
-                  Integrated Google Maps API to display nearby donors and blood
-                  banks using geolocation filters.
-                </li>
-                <li>
-                  Configured Firebase Auth and Firestore for secure
-                  authentication and real-time database syncing.
-                </li>
-              </ul>
-              <div class="project-stack">
-                <span class="stack-tag">Java</span>
-                <span class="stack-tag">XML</span>
-                <span class="stack-tag">Firebase</span>
-                <span class="stack-tag">Retrofit</span>
-                <span class="stack-tag">Google Maps API</span>
-              </div>
-              <div class="project-links">
-                <a
-                  href="https://github.com/omarfaruk-k/"
-                  class="project-link"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"
-                    />
-                  </svg>
-                  Source
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 2: Lost and Found -->
-          <div class="project-card reveal" style="transition-delay: 0.1s">
-            <div
-              class="project-img"
-              style="
-                background: linear-gradient(135deg, #0a1020 0%, #0d1a2e 100%);
-              "
-            >
-              🗺️
-              <span class="project-img-label">MOBILE · CROSS-PLATFORM</span>
-            </div>
-            <div class="project-body">
-              <h3 class="project-title">Lost &amp; Found App</h3>
-              <p class="project-desc">
-                A cross-platform mobile app helping users report and locate lost
-                items through map-based search and real-time notifications.
-              </p>
-              <ul class="project-bullets">
-                <li>
-                  Built Firebase backend handling item listings, user
-                  submissions, and reporting workflow with structured NoSQL
-                  schema.
-                </li>
-                <li>
-                  Implemented Firebase Cloud Messaging for instant notifications
-                  when matching lost items are found nearby.
-                </li>
-                <li>
-                  Added location filters and item categorisation for efficient
-                  search and post-discovery updates.
-                </li>
-              </ul>
-              <div class="project-stack">
-                <span class="stack-tag">Flutter</span>
-                <span class="stack-tag">Firebase</span>
-                <span class="stack-tag">FCM</span>
-                <span class="stack-tag">Google Maps API</span>
-                <span class="stack-tag">Firestore</span>
-              </div>
-              <div class="project-links">
-                <a
-                  href="https://github.com/omarfaruk-k/"
-                  class="project-link"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"
-                    />
-                  </svg>
-                  Source
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 3: Summator -->
-          <div class="project-card reveal" style="transition-delay: 0.2s">
-            <div
-              class="project-img"
-              style="
-                background: linear-gradient(135deg, #0a0a1a 0%, #0e0e2a 100%);
-              "
-            >
-              🧮
-              <span class="project-img-label">MOBILE · ANDROID · LIVE</span>
-            </div>
-            <div class="project-body">
-              <h3 class="project-title">Summator — Mental Math Game</h3>
-              <p class="project-desc">
-                A mobile game that challenges users to improve mental math
-                skills through time-based summation rounds. Live on Android.
-              </p>
-              <ul class="project-bullets">
-                <li>
-                  Designed difficulty progression logic and backend tracking to
-                  record user performance and enable dynamic difficulty levels.
-                </li>
-                <li>
-                  Used Firebase Auth and Firestore to manage user sessions,
-                  score history, and game preferences securely.
-                </li>
-                <li>
-                  Currently live on Android — iOS and web versions planned via
-                  Flutter.
-                </li>
-              </ul>
-              <div class="project-stack">
-                <span class="stack-tag">Flutter</span>
-                <span class="stack-tag">Firebase</span>
-                <span class="stack-tag">Firestore</span>
-                <span class="stack-tag">Firebase Auth</span>
-              </div>
-              <div class="project-links">
-                <a
-                  href="https://github.com/omarfaruk-k/"
-                  class="project-link"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"
-                    />
-                  </svg>
-                  Source
-                </a>
-                <a href="#" class="project-link">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                    />
-                    <polyline points="15 3 21 3 21 9" />
-                    <line x1="10" y1="14" x2="21" y2="3" />
-                  </svg>
-                  Play Store
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+  <section id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Projects</div>
+        <h2 class="section-title">Things I've built</h2>
+        <p class="section-desc">A selection of projects — mobile apps, web platforms, and games. All built and shipped end-to-end.</p>
       </div>
-    </section>
 
-    <hr class="divider" />
+      <div class="projects-grid">
 
-    <!-- ============================================================
+        <!-- Project 1: redBond -->
+        <div class="project-card reveal">
+          <div class="project-img" style="background: linear-gradient(135deg, #1a0a0a 0%, #2a0e0e 100%);">
+            🩸
+            <span class="project-img-label">MOBILE · ANDROID</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">redBond — Blood Donation App</h3>
+            <p class="project-desc">
+              A real-time mobile app connecting blood donors and recipients, addressing emergency response delays in Bangladesh.
+            </p>
+            <ul class="project-bullets">
+              <li>Led backend development in a team of 3; designed Firebase data architecture for user profiles, blood requests, and donor history.</li>
+              <li>Integrated Google Maps API to display nearby donors and blood banks using geolocation filters.</li>
+              <li>Configured Firebase Auth and Firestore for secure authentication and real-time database syncing.</li>
+            </ul>
+            <div class="project-stack">
+              <span class="stack-tag">Java</span>
+              <span class="stack-tag">XML</span>
+              <span class="stack-tag">Firebase</span>
+              <span class="stack-tag">Retrofit</span>
+              <span class="stack-tag">Google Maps API</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/omarfaruk-k/" class="project-link" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                Source
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Lost and Found -->
+        <div class="project-card reveal" style="transition-delay: 0.1s">
+          <div class="project-img" style="background: linear-gradient(135deg, #0a1020 0%, #0d1a2e 100%);">
+            🗺️
+            <span class="project-img-label">MOBILE · CROSS-PLATFORM</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Lost &amp; Found App</h3>
+            <p class="project-desc">
+              A cross-platform mobile app helping users report and locate lost items through map-based search and real-time notifications.
+            </p>
+            <ul class="project-bullets">
+              <li>Built Firebase backend handling item listings, user submissions, and reporting workflow with structured NoSQL schema.</li>
+              <li>Implemented Firebase Cloud Messaging for instant notifications when matching lost items are found nearby.</li>
+              <li>Added location filters and item categorisation for efficient search and post-discovery updates.</li>
+            </ul>
+            <div class="project-stack">
+              <span class="stack-tag">Flutter</span>
+              <span class="stack-tag">Firebase</span>
+              <span class="stack-tag">FCM</span>
+              <span class="stack-tag">Google Maps API</span>
+              <span class="stack-tag">Firestore</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/omarfaruk-k/" class="project-link" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                Source
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Summator -->
+        <div class="project-card reveal" style="transition-delay: 0.2s">
+          <div class="project-img" style="background: linear-gradient(135deg, #0a0a1a 0%, #0e0e2a 100%);">
+            🧮
+            <span class="project-img-label">MOBILE · ANDROID · LIVE</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Summator — Mental Math Game</h3>
+            <p class="project-desc">
+              A mobile game that challenges users to improve mental math skills through time-based summation rounds. Live on Android.
+            </p>
+            <ul class="project-bullets">
+              <li>Designed difficulty progression logic and backend tracking to record user performance and enable dynamic difficulty levels.</li>
+              <li>Used Firebase Auth and Firestore to manage user sessions, score history, and game preferences securely.</li>
+              <li>Currently live on Android — iOS and web versions planned via Flutter.</li>
+            </ul>
+            <div class="project-stack">
+              <span class="stack-tag">Flutter</span>
+              <span class="stack-tag">Firebase</span>
+              <span class="stack-tag">Firestore</span>
+              <span class="stack-tag">Firebase Auth</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/omarfaruk-k/" class="project-link" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                Source
+              </a>
+              <a href="#" class="project-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Play Store
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+
+  <!-- ============================================================
        BLOG
   ============================================================ -->
-    <section id="blog">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="section-tag">Blog</div>
-          <h2 class="section-title">Writing &amp; thoughts</h2>
-          <p class="section-desc">
-            I write about web development, mobile engineering, and lessons
-            learned. Published on dev.to and Medium.
-          </p>
-        </div>
+  <section id="blog">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Blog</div>
+        <h2 class="section-title">Writing &amp; thoughts</h2>
+        <p class="section-desc">I write about web development, mobile engineering, and lessons learned. Published on dev.to and Medium.</p>
+      </div>
 
-        <div class="blog-grid">
-          <a
-            class="blog-card reveal"
-            href="https://dev.to/omarfaruk-k"
-            target="_blank"
-            rel="noopener"
-          >
-            <div class="blog-meta">
-              <span class="blog-category">Backend</span>
-              <span>dev.to</span>
-            </div>
-            <h3 class="blog-title">
-              Building REST APIs with Node.js &amp; Express
-            </h3>
-            <p class="blog-excerpt">
-              A practical walkthrough on designing clean, production-ready REST
-              APIs — covering routing, middleware, error handling, and Postman
-              testing.
-            </p>
-            <span class="blog-readmore">Read on dev.to →</span>
-          </a>
+      <div class="blog-grid">
 
-          <a
-            class="blog-card reveal"
-            href="https://omarfaruk-k.medium.com/"
-            target="_blank"
-            rel="noopener"
-            style="transition-delay: 0.1s"
-          >
-            <div class="blog-meta">
-              <span class="blog-category">Mobile</span>
-              <span>Medium</span>
-            </div>
-            <h3 class="blog-title">
-              Firebase vs Traditional Backend: When to Use What
-            </h3>
-            <p class="blog-excerpt">
-              A no-nonsense comparison of Firebase and traditional server
-              backends — when BaaS is the right call and when you need full
-              control.
-            </p>
-            <span class="blog-readmore">Read on Medium →</span>
-          </a>
+        <a class="blog-card reveal" href="https://dev.to/omarfaruk-k" target="_blank" rel="noopener">
+          <div class="blog-meta">
+            <span class="blog-category">Backend</span>
+            <span>dev.to</span>
+          </div>
+          <h3 class="blog-title">Building REST APIs with Node.js &amp; Express</h3>
+          <p class="blog-excerpt">A practical walkthrough on designing clean, production-ready REST APIs — covering routing, middleware, error handling, and Postman testing.</p>
+          <span class="blog-readmore">Read on dev.to →</span>
+        </a>
 
-          <a
-            class="blog-card reveal"
-            href="https://dev.to/omarfaruk-k"
-            target="_blank"
-            rel="noopener"
-            style="transition-delay: 0.2s"
-          >
-            <div class="blog-meta">
-              <span class="blog-category">Flutter</span>
-              <span>dev.to</span>
-            </div>
-            <h3 class="blog-title">
-              Cross-Platform Mobile Dev with Flutter in 2025
-            </h3>
-            <p class="blog-excerpt">
-              Everything I've learned shipping Flutter apps — from state
-              management and navigation to Firebase integration and Play Store
-              deployment.
-            </p>
-            <span class="blog-readmore">Read on dev.to →</span>
-          </a>
-        </div>
+        <a class="blog-card reveal" href="https://omarfaruk-k.medium.com/" target="_blank" rel="noopener" style="transition-delay: 0.1s">
+          <div class="blog-meta">
+            <span class="blog-category">Mobile</span>
+            <span>Medium</span>
+          </div>
+          <h3 class="blog-title">Firebase vs Traditional Backend: When to Use What</h3>
+          <p class="blog-excerpt">A no-nonsense comparison of Firebase and traditional server backends — when BaaS is the right call and when you need full control.</p>
+          <span class="blog-readmore">Read on Medium →</span>
+        </a>
 
-        <!-- <p class="blog-note">
+        <a class="blog-card reveal" href="https://dev.to/omarfaruk-k" target="_blank" rel="noopener" style="transition-delay: 0.2s">
+          <div class="blog-meta">
+            <span class="blog-category">Flutter</span>
+            <span>dev.to</span>
+          </div>
+          <h3 class="blog-title">Cross-Platform Mobile Dev with Flutter in 2025</h3>
+          <p class="blog-excerpt">Everything I've learned shipping Flutter apps — from state management and navigation to Firebase integration and Play Store deployment.</p>
+          <span class="blog-readmore">Read on dev.to →</span>
+        </a>
+
+      </div>
+
+      <p class="blog-note">
         More articles on
         <a href="https://dev.to/omarfaruk-k" target="_blank" rel="noopener">dev.to</a>
         and
         <a href="https://omarfaruk-k.medium.com/" target="_blank" rel="noopener">Medium</a> ↗
-      </p> -->
-        <p class="blog-note">
-          <a href="blog/blog-index.html">View all posts →</a>
-          &nbsp;·&nbsp; also on
-          <a href="https://dev.to/omarfaruk-k" target="_blank" rel="noopener"
-            >dev.to</a
-          >
-          and
-          <a
-            href="https://omarfaruk-k.medium.com/"
-            target="_blank"
-            rel="noopener"
-            >Medium</a
-          >
-        </p>
-      </div>
-    </section>
+      </p>
+    </div>
+  </section>
 
-    <hr class="divider" />
+  <hr class="divider" />
 
-    <!-- ============================================================
+
+  <!-- ============================================================
        CONTACT
   ============================================================ -->
-    <section id="contact">
-      <div class="container">
-        <div class="contact-wrap">
-          <!-- Left: info -->
-          <div class="reveal">
-            <div class="section-tag">Contact</div>
-            <h2 class="section-title">Let's work<br /><em>together</em></h2>
-            <p>
-              Have a project in mind, want to collaborate, or just want to say
-              hi? I'm always open to interesting conversations and opportunities
-              — especially as I approach graduation.
-            </p>
-            <a class="contact-email" href="mailto:omarfaruk.k.cs@gmail.com">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-                />
-                <polyline points="22,6 12,13 2,6" />
-              </svg>
-              omarfaruk.k.cs@gmail.com
-            </a>
-            <div class="contact-socials">
-              <a
-                class="social-chip"
-                href="https://github.com/omarfaruk-k/"
-                target="_blank"
-                rel="noopener"
-                >GitHub</a
-              >
-              <a
-                class="social-chip"
-                href="https://www.linkedin.com/in/omarfaruk-k/"
-                target="_blank"
-                rel="noopener"
-                >LinkedIn</a
-              >
-              <a
-                class="social-chip"
-                href="https://dev.to/omarfaruk-k"
-                target="_blank"
-                rel="noopener"
-                >dev.to</a
-              >
-              <a
-                class="social-chip"
-                href="https://codeforces.com/profile/omarfaruk"
-                target="_blank"
-                rel="noopener"
-                >Codeforces</a
-              >
-              <a class="social-chip" href="tel:+8801636657216"
-                >+880 1636 657216</a
-              >
+  <section id="contact">
+    <div class="container">
+      <div class="contact-wrap">
+
+        <!-- Left: info -->
+        <div class="reveal">
+          <div class="section-tag">Contact</div>
+          <h2 class="section-title">Let's work<br /><em>together</em></h2>
+          <p>Have a project in mind, want to collaborate, or just want to say hi? I'm always open to interesting conversations and opportunities — especially as I approach graduation.</p>
+          <a class="contact-email" href="mailto:omarfaruk.k.cs@gmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            omarfaruk.k.cs@gmail.com
+          </a>
+          <div class="contact-socials">
+            <a class="social-chip" href="https://github.com/omarfaruk-k/" target="_blank" rel="noopener">GitHub</a>
+            <a class="social-chip" href="https://www.linkedin.com/in/omarfaruk-k/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="social-chip" href="https://dev.to/omarfaruk-k" target="_blank" rel="noopener">dev.to</a>
+            <a class="social-chip" href="https://codeforces.com/profile/omarfaruk" target="_blank" rel="noopener">Codeforces</a>
+            <a class="social-chip" href="tel:+8801636657216">+880 1636 657216</a>
+          </div>
+        </div>
+
+        <!-- Right: form -->
+        <form class="reveal" style="transition-delay: 0.15s" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required />
             </div>
           </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="What's this about?" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell me about your project or just say hi..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="align-self: flex-start;">
+            Send Message
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+          <div class="form-status" id="formStatus">✓ Message sent! I'll get back to you soon.</div>
+        </form>
 
-          <!-- Right: form -->
-          <form class="reveal" style="transition-delay: 0.15s" id="contactForm">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Your name"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="your@email.com"
-                  required
-                />
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="subject">Subject</label>
-              <input
-                type="text"
-                id="subject"
-                name="subject"
-                placeholder="What's this about?"
-              />
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                placeholder="Tell me about your project or just say hi..."
-                required
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              class="btn btn-primary"
-              style="align-self: flex-start"
-            >
-              Send Message
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-              >
-                <line x1="22" y1="2" x2="11" y2="13" />
-                <polygon points="22 2 15 22 11 13 2 9 22 2" />
-              </svg>
-            </button>
-            <div class="form-status" id="formStatus">
-              ✓ Message sent! I'll get back to you soon.
-            </div>
-          </form>
-        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ============================================================
+
+  <!-- ============================================================
        FOOTER
   ============================================================ -->
-    <footer>
-      <p>
-        Designed &amp; built by <strong>Omar Faruk Khan</strong> &nbsp;·&nbsp;
-        2025 &nbsp;·&nbsp;
-        <a href="https://github.com/omarfaruk-k/" target="_blank" rel="noopener"
-          >omarfaruk-k</a
-        >
-      </p>
-    </footer>
+  <footer>
+    <p>
+      Designed &amp; built by <strong>Omar Faruk Khan</strong> &nbsp;·&nbsp; 2025 &nbsp;·&nbsp;
+      <a href="https://github.com/omarfaruk-k/" target="_blank" rel="noopener">omarfaruk-k</a>
+    </p>
+  </footer>
 
-    <!-- Script -->
-    <script src="script.js"></script>
-  </body>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
 </html>
