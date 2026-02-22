@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── UPDATE THESE FOR EVERY NEW POST ── -->
+  <title>Building REST APIs with Node.js & Express — Omar Faruk Khan</title>
+  <meta name="description" content="A practical walkthrough on designing clean, production-ready REST APIs with Node.js and Express." />
+  <!-- ──────────────────────────────────── -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@300;400;500;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../style.css" />
+  <style>
+    /* ── Post-page-specific styles ── */
+    .post-hero {
+      padding: 7rem 0 3.5rem;
+      background: var(--bg2);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .breadcrumb {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .breadcrumb a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .breadcrumb a:hover { text-decoration: underline; }
+
+    .post-meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .post-category {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--accent2);
+      border: 1px solid rgba(91,143,255,0.3);
+      border-radius: 4px;
+      padding: 0.2rem 0.6rem;
+    }
+
+    .post-meta-item {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+
+    .post-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.2rem;
+    }
+
+    .post-subtitle {
+      font-size: 1.1rem;
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 640px;
+      font-weight: 300;
+    }
+
+    /* External link banner */
+    .external-banner {
+      background: rgba(91,143,255,0.07);
+      border: 1px solid rgba(91,143,255,0.2);
+      border-radius: 10px;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .external-banner p {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--muted);
+      flex: 1;
+    }
+
+    .external-banner a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--accent2);
+      text-decoration: none;
+      border: 1px solid rgba(91,143,255,0.3);
+      border-radius: 6px;
+      padding: 0.4rem 0.8rem;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+
+    .external-banner a:hover {
+      background: rgba(91,143,255,0.12);
+    }
+
+    .external-banner svg { width: 12px; height: 12px; }
+
+    /* Post body layout */
+    .post-layout {
+      display: grid;
+      grid-template-columns: 1fr 260px;
+      gap: 4rem;
+      padding: 4rem 0 5rem;
+      background: var(--bg);
+      align-items: start;
+    }
+
+    /* Article content */
+    .post-content {
+      max-width: 720px;
+      font-size: 1.02rem;
+      line-height: 1.85;
+      color: var(--text);
+    }
+
+    .post-content h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.7rem;
+      margin: 2.5rem 0 1rem;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      color: var(--text);
+    }
+
+    .post-content h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.25rem;
+      margin: 2rem 0 0.75rem;
+      color: var(--text);
+    }
+
+    .post-content p { margin-bottom: 1.4rem; color: var(--muted); }
+
+    .post-content p strong { color: var(--text); font-weight: 500; }
+
+    .post-content a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .post-content ul,
+    .post-content ol {
+      margin: 0.5rem 0 1.4rem 1.5rem;
+      color: var(--muted);
+    }
+
+    .post-content li { margin-bottom: 0.4rem; line-height: 1.7; }
+
+    /* Code blocks */
+    .post-content pre {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem;
+      overflow-x: auto;
+      margin: 1.5rem 0;
+      position: relative;
+    }
+
+    .post-content pre code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      color: var(--text);
+      line-height: 1.7;
+      background: none;
+      padding: 0;
+      border: none;
+    }
+
+    /* Inline code */
+    .post-content code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85em;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.15em 0.4em;
+      color: var(--accent);
+    }
+
+    /* Blockquote */
+    .post-content blockquote {
+      border-left: 3px solid var(--accent);
+      margin: 1.5rem 0;
+      padding: 0.8rem 0 0.8rem 1.5rem;
+      background: var(--bg2);
+      border-radius: 0 8px 8px 0;
+    }
+
+    .post-content blockquote p {
+      margin: 0;
+      font-style: italic;
+      color: var(--text);
+    }
+
+    /* Divider inside post */
+    .post-content hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2.5rem 0;
+    }
+
+    /* Tags at bottom of post */
+    .post-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .post-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.25rem 0.6rem;
+      color: var(--muted);
+    }
+
+    /* Author card at bottom */
+    .author-card {
+      margin-top: 3rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.8rem;
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+    }
+
+    .author-avatar {
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      background: var(--bg3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.5rem;
+      color: var(--accent);
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .author-avatar img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+
+    .author-info h4 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.05rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .author-info p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 0.6rem;
+    }
+
+    .author-links { display: flex; gap: 0.6rem; }
+
+    .author-link {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--accent);
+      text-decoration: none;
+      border: 1px solid rgba(0,229,192,0.25);
+      border-radius: 4px;
+      padding: 0.2rem 0.5rem;
+      transition: background 0.2s;
+    }
+
+    .author-link:hover { background: rgba(0,229,192,0.08); }
+
+    /* ── Sidebar / TOC ── */
+    .post-sidebar {
+      position: sticky;
+      top: 80px;
+    }
+
+    .toc {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.4rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .toc-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .toc ol {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      counter-reset: toc-counter;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .toc li { counter-increment: toc-counter; }
+
+    .toc a {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-decoration: none;
+      display: flex;
+      gap: 0.6rem;
+      align-items: baseline;
+      transition: color 0.2s;
+      line-height: 1.5;
+    }
+
+    .toc a::before {
+      content: counter(toc-counter, decimal-leading-zero);
+      color: var(--border);
+      font-size: 0.65rem;
+      flex-shrink: 0;
+    }
+
+    .toc a:hover { color: var(--accent); }
+
+    .share-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.4rem;
+    }
+
+    .share-box .toc-title { margin-bottom: 0.8rem; }
+
+    .share-links { display: flex; flex-direction: column; gap: 0.5rem; }
+
+    .share-link {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 0.4rem 0.6rem;
+      border-radius: 6px;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .share-link:hover {
+      background: var(--bg3);
+      color: var(--text);
+    }
+
+    .share-link svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+    /* ── Next / Prev navigation ── -->
+    .post-nav {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      padding: 3rem 0 0;
+      border-top: 1px solid var(--border);
+      margin-top: 3rem;
+    }
+
+    .post-nav-link {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.2rem;
+      text-decoration: none;
+      color: var(--text);
+      transition: border-color 0.2s, transform 0.2s;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .post-nav-link:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .post-nav-link.next { text-align: right; }
+
+    .post-nav-direction {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+    }
+
+    .post-nav-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 0.95rem;
+      line-height: 1.3;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .post-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .post-sidebar { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <!-- NAV -->
+  <nav>
+    <a href="../../index.html" class="nav-logo">omar<span>.</span>dev</a>
+    <ul class="nav-links">
+      <li><a href="../../index.html#about">about</a></li>
+      <li><a href="../../index.html#skills">skills</a></li>
+      <li><a href="../../index.html#experience">experience</a></li>
+      <li><a href="../../index.html#projects">projects</a></li>
+      <li><a href="../index.html" style="color:var(--accent)">blog</a></li>
+      <li><a href="../../index.html#contact">contact</a></li>
+    </ul>
+    <div style="display:flex; align-items:center; gap:0.75rem;">
+      <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">☀️</button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="../../index.html#about">about</a>
+    <a href="../../index.html#skills">skills</a>
+    <a href="../../index.html#experience">experience</a>
+    <a href="../../index.html#projects">projects</a>
+    <a href="../index.html">blog</a>
+    <a href="../../index.html#contact">contact</a>
+  </div>
+
+  <!-- POST HERO -->
+  <div class="post-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../../index.html">home</a>
+        <span>/</span>
+        <a href="../index.html">blog</a>
+        <span>/</span>
+        <!-- ── UPDATE: short post slug ── -->
+        <span>building-rest-apis-nodejs</span>
+      </div>
+
+      <div class="post-meta-row">
+        <!-- ── UPDATE: category ── -->
+        <span class="post-category">Backend</span>
+        <span class="post-meta-item">Jan 15, 2025</span>
+        <span class="post-meta-item">·</span>
+        <span class="post-meta-item">5 min read</span>
+      </div>
+
+      <!-- ── UPDATE: post title ── -->
+      <h1 class="post-title">Building REST APIs with<br />Node.js &amp; Express</h1>
+
+      <!-- ── UPDATE: post subtitle / intro ── -->
+      <p class="post-subtitle">
+        A practical walkthrough on designing clean, production-ready REST APIs —
+        covering routing, middleware, error handling, validation, and Postman testing.
+      </p>
+    </div>
+  </div>
+
+  <!-- POST BODY -->
+  <div class="post-layout">
+    <div class="container" style="display:contents;">
+
+      <!-- Main article -->
+      <article class="post-content">
+
+        <!--
+          ── OPTIONAL: If this post is also on Medium or dev.to,
+             show this banner. Remove it if the post is only here.
+        -->
+        <div class="external-banner">
+          <p>📖 This post is also published on Medium and dev.to.</p>
+          <a href="https://omarfaruk-k.medium.com/" target="_blank" rel="noopener">
+            Read on Medium
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+          <a href="https://dev.to/omarfaruk-k" target="_blank" rel="noopener">
+            Read on dev.to
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+
+        <!-- ════════════════════════════════════════
+             WRITE YOUR POST CONTENT BELOW.
+             Use standard HTML tags:
+               <h2> for main sections
+               <h3> for sub-sections
+               <p>  for paragraphs
+               <pre><code> for code blocks
+               <code> for inline code
+               <ul> / <ol> for lists
+               <blockquote> for callouts
+               <hr> for section breaks
+             ════════════════════════════════════════ -->
+
+        <h2 id="intro">Why REST APIs still matter</h2>
+
+        <p>
+          REST APIs are the backbone of almost every modern web and mobile application.
+          Whether you're building a backend for a React frontend, a Flutter mobile app,
+          or integrating with third-party services, you'll be writing and consuming REST APIs
+          constantly. Getting the fundamentals right from the start saves a lot of pain later.
+        </p>
+
+        <p>
+          In this post I'll walk through building a clean, production-ready API with
+          <strong>Node.js and Express</strong> — the stack I use most often in my own projects.
+        </p>
+
+        <h2 id="setup">Project setup</h2>
+
+        <p>Start by initialising a new Node.js project and installing the core dependencies:</p>
+
+        <pre><code>mkdir my-api && cd my-api
+npm init -y
+npm install express dotenv
+npm install --save-dev nodemon</code></pre>
+
+        <p>
+          Create an <code>index.js</code> entry point. The structure I use for most projects
+          looks like this:
+        </p>
+
+        <pre><code>my-api/
+├── src/
+│   ├── routes/
+│   │   └── users.js
+│   ├── controllers/
+│   │   └── userController.js
+│   ├── middleware/
+│   │   └── errorHandler.js
+│   └── app.js
+├── .env
+└── index.js</code></pre>
+
+        <h2 id="routing">Routing and controllers</h2>
+
+        <p>
+          Separating routes from controllers keeps your code clean and testable.
+          The route file defines <em>what</em> the endpoint is; the controller defines
+          <em>what happens</em> when it's hit.
+        </p>
+
+        <pre><code>// src/routes/users.js
+const express = require('express');
+const router  = express.Router();
+const { getUsers, createUser } = require('../controllers/userController');
+
+router.get('/',    getUsers);
+router.post('/',   createUser);
+
+module.exports = router;</code></pre>
+
+        <pre><code>// src/controllers/userController.js
+exports.getUsers = async (req, res, next) => {
+  try {
+    // fetch from DB here
+    res.json({ users: [] });
+  } catch (err) {
+    next(err); // pass to error handler
+  }
+};
+
+exports.createUser = async (req, res, next) => {
+  try {
+    const { name, email } = req.body;
+    // save to DB here
+    res.status(201).json({ message: 'User created', name, email });
+  } catch (err) {
+    next(err);
+  }
+};</code></pre>
+
+        <h2 id="errors">Error handling</h2>
+
+        <p>
+          A global error handler middleware catches anything passed to <code>next(err)</code>.
+          This way you avoid writing the same try/catch response logic everywhere.
+        </p>
+
+        <pre><code>// src/middleware/errorHandler.js
+module.exports = (err, req, res, next) => {
+  console.error(err.stack);
+  res.status(err.status || 500).json({
+    error: err.message || 'Internal Server Error',
+  });
+};</code></pre>
+
+        <blockquote>
+          <p>
+            Always pass errors to <code>next(err)</code> instead of sending a response
+            directly inside catch blocks. It gives you one place to control all error output.
+          </p>
+        </blockquote>
+
+        <h2 id="testing">Testing with Postman</h2>
+
+        <p>
+          Once your server is running (<code>npm run dev</code>), open Postman and:
+        </p>
+
+        <ul>
+          <li>Send a <code>GET</code> request to <code>http://localhost:3000/api/users</code></li>
+          <li>Send a <code>POST</code> with a JSON body: <code>{"name":"Omar","email":"test@test.com"}</code></li>
+          <li>Check the response status codes — <code>200</code> for GET, <code>201</code> for created</li>
+        </ul>
+
+        <hr />
+
+        <h2 id="next">What's next</h2>
+
+        <p>
+          This covers the basics. In a follow-up post I'll add input validation with
+          <strong>Joi</strong>, authentication with <strong>JWT</strong>, and rate limiting.
+          Those three additions take an API from "it works locally" to "it's safe to deploy".
+        </p>
+
+        <!-- ════════════════════════════════════════
+             END OF POST CONTENT
+             ════════════════════════════════════════ -->
+
+        <!-- Tags -->
+        <div class="post-tags">
+          <!-- ── UPDATE: add your post tags ── -->
+          <span class="post-tag">Node.js</span>
+          <span class="post-tag">Express</span>
+          <span class="post-tag">REST API</span>
+          <span class="post-tag">Backend</span>
+          <span class="post-tag">JavaScript</span>
+        </div>
+
+        <!-- Author card -->
+        <div class="author-card">
+          <div class="author-avatar">
+            <img src="../../author.jpg" alt="Omar Faruk Khan"
+              onerror="this.style.display='none'; this.parentElement.textContent='O';" />
+          </div>
+          <div class="author-info">
+            <h4>Omar Faruk Khan</h4>
+            <p>Software Engineer · Full Stack &amp; Mobile · Based in Bangladesh. Writing about things I build and learn.</p>
+            <div class="author-links">
+              <a class="author-link" href="https://github.com/omarfaruk-k/" target="_blank">GitHub</a>
+              <a class="author-link" href="https://dev.to/omarfaruk-k" target="_blank">dev.to</a>
+              <a class="author-link" href="https://omarfaruk-k.medium.com/" target="_blank">Medium</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Prev / Next navigation -->
+        <nav class="post-nav">
+          <!-- ── UPDATE: link to prev post (or remove if none) ── -->
+          <a class="post-nav-link prev" href="../index.html">
+            <span class="post-nav-direction">← All posts</span>
+            <span class="post-nav-title">Back to blog</span>
+          </a>
+          <!-- ── UPDATE: link to next post (or remove if none) ── -->
+          <a class="post-nav-link next" href="../index.html">
+            <span class="post-nav-direction">Next →</span>
+            <span class="post-nav-title">More articles</span>
+          </a>
+        </nav>
+
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="post-sidebar">
+        <div class="toc">
+          <div class="toc-title">Contents</div>
+          <!-- ── UPDATE: match your h2 headings and their IDs ── -->
+          <ol>
+            <li><a href="#intro">Why REST APIs matter</a></li>
+            <li><a href="#setup">Project setup</a></li>
+            <li><a href="#routing">Routing &amp; controllers</a></li>
+            <li><a href="#errors">Error handling</a></li>
+            <li><a href="#testing">Testing with Postman</a></li>
+            <li><a href="#next">What's next</a></li>
+          </ol>
+        </div>
+
+        <div class="share-box">
+          <div class="toc-title">Share</div>
+          <div class="share-links">
+            <a class="share-link" href="https://twitter.com/intent/tweet?text=Building REST APIs with Node.js & Express by @omarfaruk_k&url=https://omarfaruk-k.github.io/blog/my-first-post/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              Share on X
+            </a>
+            <a class="share-link" href="https://www.linkedin.com/sharing/share-offsite/?url=https://omarfaruk-k.github.io/blog/my-first-post/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+              Share on LinkedIn
+            </a>
+            <a class="share-link" href="../index.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+              ← All posts
+            </a>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>
+      Designed &amp; built by <strong>Omar Faruk Khan</strong> &nbsp;·&nbsp; 2025 &nbsp;·&nbsp;
+      <a href="https://github.com/omarfaruk-k/" target="_blank" rel="noopener">omarfaruk-k</a>
+    </p>
+  </footer>
+
+  <script src="../../script.js"></script>
+</body>
+</html>
