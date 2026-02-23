@@ -10,6 +10,7 @@ omarfaruk-k.github.io/
 ├── author.jpg               ← your photo
 └── blog/
     ├── index.html           ← blog listing page
+    |── blgo.css
     ├── my-first-post/
     │   └── index.html       ← post page
     ├── your-next-post/      ← duplicate this folder for each new post

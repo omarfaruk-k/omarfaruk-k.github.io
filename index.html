@@ -13,9 +13,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@300;400;500;700&family=DM+Sans:wght@300;400;500&display=swap"
     rel="stylesheet" />
-
   <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:display=swap" rel="stylesheet" />
-
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
   <!-- Stylesheet -->
@@ -29,27 +27,19 @@
   <!-- ============================================================
        NAVIGATION
   ============================================================ -->
-
   <nav>
     <a href="#hero" class="nav-logo">omarfaruk-k</a>
-
     <ul class="nav-links">
       <li><a href="#about">about</a></li>
-
       <li><a href="#experience">experience</a></li>
       <li><a href="#projects">projects</a></li>
-      <li><a href="#blog">blog</a></li>
+      <li><a href="blog/blog-index.html">blog</a></li>
       <li><a href="#contact">contact</a></li>
     </ul>
-
     <div class="nav-actions">
-      <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
-        ☀
-      </button>
+      <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">☀</button>
       <button class="hamburger" id="hamburger" aria-label="Open mobile menu">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
@@ -65,7 +55,7 @@
   </div>
 
   <!-- ============================================================
-       HERO — centered portrait layout
+       HERO  — bg: var(--bg)
   ============================================================ -->
   <section id="hero">
     <div class="bg-orb orb1"></div>
@@ -73,100 +63,93 @@
 
     <div class="container">
       <div class="hero-centered">
-        <!-- Avatar -->
         <div class="hero-avatar-wrap">
           <div class="hero-avatar-ring"></div>
           <img class="hero-avatar" src="assets/gmmm.png" alt="Omar Faruk Khan" onerror="
                 this.style.display = 'none';
                 this.nextElementSibling.style.display = 'flex';
               " />
-          <!-- Fallback if image missing -->
           <div class="hero-avatar hero-avatar-fallback">O</div>
-          <!-- Wave emoji badge -->
           <div class="hero-wave">👋</div>
         </div>
 
-        <!-- Name -->
         <h1 class="hero-name-centered">Omar Faruk Khan</h1>
-
-        <!-- One-liner bio -->
         <p class="hero-bio">Software Engineer · Backend Enthusiast</p>
+<div class="hero-social-row">
 
-        <!-- Social icon row -->
-        <div class="hero-social-row">
-          <a class="hero-social-icon" title="GitHub" href="https://github.com/omarfaruk-k/" target="_blank"
-            rel="noopener noreferrer" aria-label="GitHub">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
-            </svg>
+  <!-- GitHub -->
+  <a class="hero-social-icon" title="GitHub" href="https://github.com/omarfaruk-k/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+    <svg viewBox="0 0 24 24" fill="currentColor" role="img"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+  </a>
+
+  <!-- Email -->
+  <a class="hero-social-icon" title="Email" href="mailto:omarfaruk.k.cs@gmail.com" aria-label="Email">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+      <polyline points="22,6 12,13 2,6"/>
+    </svg>
+  </a>
+
+  <!-- LinkedIn -->
+  <a class="hero-social-icon" title="LinkedIn" href="https://www.linkedin.com/in/omarfaruk-k/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+    <svg viewBox="0 0 24 24" fill="currentColor" role="img"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+  </a>
+
+  <!-- Codeforces -->
+  <a class="hero-social-icon" title="Codeforces" href="https://codeforces.com/profile/omarfaruk" target="_blank" rel="noopener noreferrer" aria-label="Codeforces">
+    <svg viewBox="0 0 24 24" fill="currentColor" role="img"><path d="M4.5 7.5A1.5 1.5 0 0 1 6 9v10.5A1.5 1.5 0 0 1 4.5 21h-3C.673 21 0 20.328 0 19.5V9c0-.828.673-1.5 1.5-1.5h3zm9-4.5A1.5 1.5 0 0 1 15 4.5v15a1.5 1.5 0 0 1-1.5 1.5h-3c-.827 0-1.5-.672-1.5-1.5v-15c0-.828.673-1.5 1.5-1.5h3zm9 7.5A1.5 1.5 0 0 1 24 12v7.5a1.5 1.5 0 0 1-1.5 1.5h-3a1.5 1.5 0 0 1-1.5-1.5V12a1.5 1.5 0 0 1 1.5-1.5h3z"/></svg>
+  </a>
+
+  <!-- HackerRank — Simple Icons official path -->
+  <a class="hero-social-icon" title="HackerRank" href="https://www.hackerrank.com/profile/omarfaruk_k" target="_blank" rel="noopener noreferrer" aria-label="HackerRank">
+   <img src="assets/hackerrank.svg" alt="Hackerrank" width="30" height="30"
+  </a>
+
+  <!-- Dev.to — Simple Icons official path -->
+  <a class="hero-social-icon" title="Dev.to" href="https://dev.to/omarfaruk-k" target="_blank" rel="noopener noreferrer" aria-label="dev.to">
+    <svg viewBox="0 0 24 24" fill="currentColor" role="img"><path d="M7.42 10.05c-.18-.16-.46-.23-.84-.23H6l.02 2.44.04 2.45.56-.02c.41 0 .63-.07.83-.26.24-.24.26-.36.26-2.2 0-1.91-.02-1.96-.29-2.18zM0 4.94v14.12h24V4.94H0zM8.56 15.3c-.44.58-1.06.77-2.53.77H4.71V8.53h1.4c1.67 0 2.16.18 2.6.9.27.43.29.6.32 2.57.05 2.23-.02 2.73-.47 3.3zm5.09-5.47h-2.47v1.77h1.52v1.28l-.72.04-.75.03v1.77l1.22.03 1.2.04v1.28h-1.6c-1.53 0-1.6-.01-1.87-.3l-.3-.28v-3.16c0-3.02.01-3.18.25-3.48.23-.31.25-.31 1.88-.31h1.64v1.28zm4.68 5.45c-.17.43-.64.79-1 .79-.18 0-.45-.15-.67-.39-.32-.32-.45-.63-.82-2.08l-.9-3.39-.45-1.67h.76c.4 0 .75.02.75.05 0 .06 1.16 4.54 1.26 4.83.04.15.32-.7.73-2.3l.62-2.51.76-.03c.41-.02.75 0 .75.05 0 .05-.29 1.13-.64 2.41-.35 1.28-.7 2.61-.77 2.93-.07.32-.2.7-.38 1.22z"/></svg>
+  </a>
+
+  <!-- Medium — Simple Icons official path -->
+<a class="hero-social-icon" title="Medium" href="https://omarfaruk-k.medium.com/" target="_blank" rel="noopener noreferrer" aria-label="Medium">
+  <img src="assets/medium.svg" alt="Medium" width="30" height="30" />
+</a>
+
+</div>
+        <!-- <div class="hero-social-row">
+          <a class="hero-social-icon" title="GitHub" href="https://github.com/omarfaruk-k/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
           </a>
-
           <a class="hero-social-icon" title="Email" href="mailto:omarfaruk.k.cs@gmail.com" aria-label="Email">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-              <polyline points="22,6 12,13 2,6" />
-            </svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           </a>
-
-          <a class="hero-social-icon" title="LinkedIn" href="https://www.linkedin.com/in/omarfaruk-k/" target="_blank"
-            rel="noopener noreferrer" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
-              <circle cx="4" cy="4" r="2" />
-            </svg>
+          <a class="hero-social-icon" title="LinkedIn" href="https://www.linkedin.com/in/omarfaruk-k/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
           </a>
-
-          <a class="hero-social-icon" title="Codeforces" href="https://codeforces.com/profile/omarfaruk" target="_blank"
-            rel="noopener noreferrer" aria-label="Codeforces">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M4.5 7.5A1.5 1.5 0 0 1 6 9v10.5A1.5 1.5 0 0 1 4.5 21h-3C.673 21 0 20.328 0 19.5V9c0-.828.673-1.5 1.5-1.5h3zm9-4.5A1.5 1.5 0 0 1 15 4.5v15a1.5 1.5 0 0 1-1.5 1.5h-3c-.827 0-1.5-.672-1.5-1.5v-15c0-.828.673-1.5 1.5-1.5h3zm9 7.5A1.5 1.5 0 0 1 24 12v7.5a1.5 1.5 0 0 1-1.5 1.5h-3a1.5 1.5 0 0 1-1.5-1.5V12a1.5 1.5 0 0 1 1.5-1.5h3z" />
-            </svg>
+          <a class="hero-social-icon" title="Codeforces" href="https://codeforces.com/profile/omarfaruk" target="_blank" rel="noopener noreferrer" aria-label="Codeforces">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.5 7.5A1.5 1.5 0 0 1 6 9v10.5A1.5 1.5 0 0 1 4.5 21h-3C.673 21 0 20.328 0 19.5V9c0-.828.673-1.5 1.5-1.5h3zm9-4.5A1.5 1.5 0 0 1 15 4.5v15a1.5 1.5 0 0 1-1.5 1.5h-3c-.827 0-1.5-.672-1.5-1.5v-15c0-.828.673-1.5 1.5-1.5h3zm9 7.5A1.5 1.5 0 0 1 24 12v7.5a1.5 1.5 0 0 1-1.5 1.5h-3a1.5 1.5 0 0 1-1.5-1.5V12a1.5 1.5 0 0 1 1.5-1.5h3z"/></svg>
           </a>
-
-          <a class="hero-social-icon" title="Hackerrank" href="https://www.hackerrank.com/profile/omarfaruk_k"
-            target="_blank" rel="noopener noreferrer" aria-label="HackerRank">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-.188 17.98c-.34 0-.635-.14-.832-.37l-2.18-2.7v2.6c0 .256-.207.47-.467.47H6.7c-.26 0-.467-.214-.467-.47V6.49c0-.256.207-.47.467-.47h1.633c.26 0 .467.214.467.47v2.6l2.18-2.7c.197-.23.493-.37.832-.37h1.98c.47 0 .712.547.385.893l-2.9 3.107 2.9 3.108c.327.346.085.893-.385.893h-1.98zm5.88 0h-1.634c-.26 0-.466-.214-.466-.47v-4.02h-1.5v4.02c0 .256-.207.47-.467.47h-1.634c-.26 0-.466-.214-.466-.47V6.49c0-.256.207-.47.466-.47h1.634c.26 0 .467.214.467.47v4.02h1.5V6.49c0-.256.207-.47.466-.47h1.634c.26 0 .467.214.467.47v11.02c0 .256-.207.47-.467.47z" />
-            </svg>
+          <a class="hero-social-icon" title="Hackerrank" href="https://www.hackerrank.com/profile/omarfaruk_k" target="_blank" rel="noopener noreferrer" aria-label="HackerRank">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-.188 17.98c-.34 0-.635-.14-.832-.37l-2.18-2.7v2.6c0 .256-.207.47-.467.47H6.7c-.26 0-.467-.214-.467-.47V6.49c0-.256.207-.47.467-.47h1.633c.26 0 .467.214.467.47v2.6l2.18-2.7c.197-.23.493-.37.832-.37h1.98c.47 0 .712.547.385.893l-2.9 3.107 2.9 3.108c.327.346.085.893-.385.893h-1.98zm5.88 0h-1.634c-.26 0-.466-.214-.466-.47v-4.02h-1.5v4.02c0 .256-.207.47-.467.47h-1.634c-.26 0-.466-.214-.466-.47V6.49c0-.256.207-.47.466-.47h1.634c.26 0 .467.214.467.47v4.02h1.5V6.49c0-.256.207-.47.466-.47h1.634c.26 0 .467.214.467.47v11.02c0 .256-.207.47-.467.47z"/></svg>
           </a>
-
-          <a class="hero-social-icon" title="Dev.to" href="https://dev.to/omarfaruk-k" target="_blank"
-            rel="noopener noreferrer" aria-label="dev.to">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M7.42 10.05c-.18-.16-.46-.23-.84-.23H6l.02 2.44.04 2.45.56-.02c.41 0 .63-.07.83-.26.24-.24.26-.36.26-2.2 0-1.91-.02-1.96-.29-2.18zM0 4.94v14.12h24V4.94H0zM8.56 15.3c-.44.58-1.06.77-2.53.77H4.71V8.53h1.4c1.67 0 2.16.18 2.6.9.27.43.29.6.32 2.57.05 2.23-.02 2.73-.47 3.3zm5.09-5.47h-2.47v1.77h1.52v1.28l-.72.04-.75.03v1.77l1.22.03 1.2.04v1.28h-1.6c-1.53 0-1.6-.01-1.87-.3l-.3-.28v-3.16c0-3.02.01-3.18.25-3.48.23-.31.25-.31 1.88-.31h1.64v1.28zm4.68 5.45c-.17.43-.64.79-1 .79-.18 0-.45-.15-.67-.39-.32-.32-.45-.63-.82-2.08l-.9-3.39-.45-1.67h.76c.4 0 .75.02.75.05 0 .06 1.16 4.54 1.26 4.83.04.15.32-.7.73-2.3l.62-2.51.76-.03c.41-.02.75 0 .75.05 0 .05-.29 1.13-.64 2.41-.35 1.28-.7 2.61-.77 2.93-.07.32-.2.7-.38 1.22z" />
-            </svg>
+          <a class="hero-social-icon" title="Dev.to" href="https://dev.to/omarfaruk-k" target="_blank" rel="noopener noreferrer" aria-label="dev.to">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.42 10.05c-.18-.16-.46-.23-.84-.23H6l.02 2.44.04 2.45.56-.02c.41 0 .63-.07.83-.26.24-.24.26-.36.26-2.2 0-1.91-.02-1.96-.29-2.18zM0 4.94v14.12h24V4.94H0zM8.56 15.3c-.44.58-1.06.77-2.53.77H4.71V8.53h1.4c1.67 0 2.16.18 2.6.9.27.43.29.6.32 2.57.05 2.23-.02 2.73-.47 3.3zm5.09-5.47h-2.47v1.77h1.52v1.28l-.72.04-.75.03v1.77l1.22.03 1.2.04v1.28h-1.6c-1.53 0-1.6-.01-1.87-.3l-.3-.28v-3.16c0-3.02.01-3.18.25-3.48.23-.31.25-.31 1.88-.31h1.64v1.28zm4.68 5.45c-.17.43-.64.79-1 .79-.18 0-.45-.15-.67-.39-.32-.32-.45-.63-.82-2.08l-.9-3.39-.45-1.67h.76c.4 0 .75.02.75.05 0 .06 1.16 4.54 1.26 4.83.04.15.32-.7.73-2.3l.62-2.51.76-.03c.41-.02.75 0 .75.05 0 .05-.29 1.13-.64 2.41-.35 1.28-.7 2.61-.77 2.93-.07.32-.2.7-.38 1.22z"/></svg>
           </a>
-
-          <a class="hero-social-icon" title="Medium" href="https://omarfaruk-k.medium.com/" target="_blank"
-            rel="noopener noreferrer" aria-label="Medium">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z" />
-            </svg>
+          <a class="hero-social-icon" title="Medium" href="https://omarfaruk-k.medium.com/" target="_blank" rel="noopener noreferrer" aria-label="Medium">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
           </a>
-        </div>
-        <!-- end hero-social-row -->
-        <!-- CTA -->
+        </div> -->
       </div>
     </div>
+
     <div class="hero-bottom">
       <a href="#projects" class="btn btn-hero">
         View My Work
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-          <polyline points="6 9 12 15 18 9" />
-        </svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
       </a>
-
       <div class="hero-scroll-hint">
         <span>scroll</span>
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <polyline points="6 9 12 15 18 9" />
-        </svg>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
       </div>
     </div>
   </section>
@@ -174,12 +157,11 @@
   <hr class="divider" />
 
   <!-- ============================================================
-       ABOUT
+       ABOUT  — bg: var(--bg2)
   ============================================================ -->
   <section id="about">
     <div class="container">
       <div class="about-merged-grid">
-        <!-- Left: bio -->
         <div class="reveal">
           <div class="section-tag">About</div>
           <h2 class="section-title">Omar<br /><em>Faruk</em> Khan</h2>
@@ -194,78 +176,43 @@
             Outside of building I enjoy competitive programming, writing
             technical articles, and mentoring peers in algorithms.
           </p>
-
-          <!-- <div class="about-merged-links">
-          <a href="https://github.com/omarfaruk-k/" target="_blank" rel="noopener" class="social-chip">GitHub</a>
-          <a href="https://www.linkedin.com/in/omarfaruk-k/" target="_blank" rel="noopener" class="social-chip">LinkedIn</a>
-          <a href="https://dev.to/omarfaruk-k" target="_blank" rel="noopener" class="social-chip">dev.to</a>
-          <a href="https://omarfaruk-k.medium.com/" target="_blank" rel="noopener" class="social-chip">Medium</a>
-        </div> -->
         </div>
 
-        <!-- Right: skills -->
         <div class="reveal" style="transition-delay: 0.15s">
-          <!-- Right: skills -->
-          <div class="reveal" style="transition-delay: 0.15s">
-            <div class="section-tag">Skills</div>
-            <div class="skill-cloud">
-              <span class="tech-tag"><i class="devicon-javascript-plain"></i> JavaScript</span>
-              <span class="tech-tag"><i class="devicon-python-plain"></i> Python</span>
-              <span class="tech-tag"><i class="devicon-java-plain"></i> Java</span>
-              <span class="tech-tag"><i class="devicon-cplusplus-plain"></i> C++</span>
-              <span class="tech-tag"><i class="devicon-dart-plain"></i> Dart</span>
-              <span class="tech-tag"><i class="devicon-react-original"></i> React.js</span>
-              <span class="tech-tag"><i class="devicon-tailwindcss-plain"></i> Tailwind</span>
-              <span class="tech-tag"><i class="devicon-bootstrap-plain"></i> Bootstrap</span>
-              <span class="tech-tag"><i class="devicon-nodejs-plain"></i> Node.js</span>
-              <span class="tech-tag"><i class="devicon-express-original"></i> Express</span>
-              <span class="tech-tag"><i class="devicon-django-plain"></i> Django</span>
-              <span class="tech-tag"><i class="devicon-flask-original"></i> Flask</span>
-              <span class="tech-tag"><i class="devicon-flutter-plain"></i> Flutter</span>
-              <span class="tech-tag"><i class="devicon-android-plain"></i> Android</span>
-              <span class="tech-tag"><i class="devicon-mysql-plain"></i> MySQL</span>
-              <span class="tech-tag"><i class="devicon-postgresql-plain"></i> PostgreSQL</span>
-              <span class="tech-tag"><i class="devicon-mongodb-plain"></i> MongoDB</span>
-              <span class="tech-tag"><i class="devicon-firebase-plain"></i> Firebase</span>
-              <span class="tech-tag"><i class="devicon-docker-plain"></i> Docker</span>
-              <span class="tech-tag"><i class="devicon-googlecloud-plain"></i> GCP</span>
-              <span class="tech-tag"><i class="devicon-github-original"></i> GitHub Actions</span>
-              <span class="tech-tag"><i class="devicon-git-plain"></i> Git</span>
-            </div>
-            <!-- <div class="skill-cloud">
-    <span class="tech-tag">JavaScript</span>
-    <span class="tech-tag">Python</span>
-    <span class="tech-tag">Java</span>
-    <span class="tech-tag">C++</span>
-    <span class="tech-tag">SQL</span>
-    <span class="tech-tag">Dart</span>
-    <span class="tech-tag">React.js</span>
-    <span class="tech-tag">Tailwind CSS</span>
-    <span class="tech-tag">Bootstrap</span>
-    <span class="tech-tag">Node.js</span>
-    <span class="tech-tag">Express.js</span>
-    <span class="tech-tag">Django</span>
-    <span class="tech-tag">Flask</span>
-    <span class="tech-tag">Flutter</span>
-    <span class="tech-tag">React Native</span>
-    <span class="tech-tag">Android</span>
-    <span class="tech-tag">MySQL</span>
-    <span class="tech-tag">PostgreSQL</span>
-    <span class="tech-tag">MongoDB</span>
-    <span class="tech-tag">Firebase</span>
-    <span class="tech-tag">Docker</span>
-    <span class="tech-tag">GCP</span>
-    <span class="tech-tag">GitHub Actions</span>
-    <span class="tech-tag">Git</span>
-    <span class="tech-tag">Postman</span>
-  </div> -->
+          <div class="section-tag">Skills</div>
+          <div class="skill-cloud">
+            <span class="tech-tag"><i class="devicon-javascript-plain"></i> JavaScript</span>
+            <span class="tech-tag"><i class="devicon-python-plain"></i> Python</span>
+            <span class="tech-tag"><i class="devicon-java-plain"></i> Java</span>
+            <span class="tech-tag"><i class="devicon-cplusplus-plain"></i> C++</span>
+            <span class="tech-tag"><i class="devicon-dart-plain"></i> Dart</span>
+            <span class="tech-tag"><i class="devicon-react-original"></i> React.js</span>
+            <span class="tech-tag"><i class="devicon-tailwindcss-plain"></i> Tailwind</span>
+            <span class="tech-tag"><i class="devicon-bootstrap-plain"></i> Bootstrap</span>
+            <span class="tech-tag"><i class="devicon-nodejs-plain"></i> Node.js</span>
+            <span class="tech-tag"><i class="devicon-express-original"></i> Express</span>
+            <span class="tech-tag"><i class="devicon-django-plain"></i> Django</span>
+            <span class="tech-tag"><i class="devicon-flask-original"></i> Flask</span>
+            <span class="tech-tag"><i class="devicon-flutter-plain"></i> Flutter</span>
+            <span class="tech-tag"><i class="devicon-android-plain"></i> Android</span>
+            <span class="tech-tag"><i class="devicon-mysql-plain"></i> MySQL</span>
+            <span class="tech-tag"><i class="devicon-postgresql-plain"></i> PostgreSQL</span>
+            <span class="tech-tag"><i class="devicon-mongodb-plain"></i> MongoDB</span>
+            <span class="tech-tag"><i class="devicon-firebase-plain"></i> Firebase</span>
+            <span class="tech-tag"><i class="devicon-docker-plain"></i> Docker</span>
+            <span class="tech-tag"><i class="devicon-googlecloud-plain"></i> GCP</span>
+            <span class="tech-tag"><i class="devicon-github-original"></i> GitHub Actions</span>
+            <span class="tech-tag"><i class="devicon-git-plain"></i> Git</span>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <hr class="divider" />
+
   <!-- ============================================================
-       EXPERIENCE / EDUCATION TIMELINE
+       EXPERIENCE / EDUCATION  — bg: var(--bg)
   ============================================================ -->
   <section id="experience">
     <div class="container">
@@ -273,22 +220,18 @@
         <div class="section-tag">Experience &amp; Education</div>
         <h2 class="section-title">My journey so far</h2>
         <p class="section-desc">
-          Academic background and key milestones that shaped how I build
-          software.
+          Academic background and key milestones that shaped how I build software.
         </p>
       </div>
 
       <div class="timeline">
-        <!-- Add your work experience here when you have it -->
-        <!-- Example entry shown below — replace with real roles -->
 
+        <!-- ── WORK EXPERIENCE ── -->
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-date">2024 — Present</div>
           <div class="timeline-role">Software Developer (Projects)</div>
-          <div class="timeline-company">
-            Self-directed · Personal &amp; Team Projects
-          </div>
+          <div class="timeline-company">Self-directed · Personal &amp; Team Projects</div>
           <p class="timeline-desc">
             Building and shipping full-stack web apps and cross-platform
             mobile applications. Working across the stack — from Firebase
@@ -302,27 +245,19 @@
           </div>
         </div>
 
+        <!-- ── SEPARATOR ── -->
+        <div class="timeline-section-label">Education</div>
+
+        <!-- ── EDUCATION ── -->
         <div class="timeline-item">
           <div class="timeline-dot"></div>
-          <div class="timeline-date">2021 — Dec 2025</div>
-          <div class="timeline-role">
-            B.Sc. in Computer Science &amp; Engineering
-          </div>
-          <div class="timeline-company">
-            Leading University · Sylhet, Bangladesh
-          </div>
+          <div class="timeline-date">2022 — Feb 2026</div>
+          <div class="timeline-role">B.Sc. in Computer Science &amp; Engineering</div>
+          <div class="timeline-company">Leading University · Sylhet, Bangladesh</div>
           <ul class="timeline-bullets">
-            <li>
-              Specialising in algorithms, data structures, software
-              engineering, and mobile development.
-            </li>
-            <li>
-              Completed projects in mobile (Java/Android, Flutter) and web
-              (Node.js, React, Django).
-            </li>
-            <li>
-              Active participant in programming contests and hackathons.
-            </li>
+            <li>Specialising in algorithms, data structures, software engineering, and mobile development.</li>
+            <li>Completed projects in mobile (Java/Android, Flutter) and web (Node.js, React, Django).</li>
+            <li>Active participant in programming contests and hackathons.</li>
           </ul>
           <div class="timeline-tags">
             <span class="timeline-tag">Algorithms</span>
@@ -335,30 +270,24 @@
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-date">Completed</div>
-          <div class="timeline-role">
-            Higher Secondary Certificate (HSC) — Science
-          </div>
+          <div class="timeline-role">Higher Secondary Certificate (HSC) — Science</div>
           <div class="timeline-company">KMSI College · GPA 5.00 / 5.00</div>
-          <p class="timeline-desc">
+          <!-- <p class="timeline-desc">
             Graduated with a perfect GPA in the Science stream, laying the
             foundation in mathematics and physics.
-          </p>
+          </p> -->
         </div>
 
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-date">Completed</div>
-          <div class="timeline-role">
-            Secondary School Certificate (SSC) — Science
-          </div>
-          <div class="timeline-company">
-            Madhabpur Pilot High School · GPA 5.00 / 5.00
-          </div>
-          <p class="timeline-desc">
-            Achieved perfect GPA in the national secondary exam in the Science
-            stream.
-          </p>
+          <div class="timeline-role">Secondary School Certificate (SSC) — Science</div>
+          <div class="timeline-company">Madhabpur Pilot High School · GPA 5.00 / 5.00</div>
+          <!-- <p class="timeline-desc">
+            Achieved perfect GPA in the national secondary exam in the Science stream.
+          </p> -->
         </div>
+
       </div>
     </div>
   </section>
@@ -366,7 +295,7 @@
   <hr class="divider" />
 
   <!-- ============================================================
-       PROJECTS
+       PROJECTS  — bg: var(--bg2)
   ============================================================ -->
   <section id="projects">
     <div class="container">
@@ -374,18 +303,15 @@
         <div class="section-tag">Projects</div>
         <h2 class="section-title">Things I've built</h2>
         <p class="section-desc">
-          A selection of projects — mobile apps, web platforms, and games. All
-          built and shipped end-to-end.
+          A selection of projects — mobile apps, web platforms, and games. All built and shipped end-to-end.
         </p>
       </div>
 
       <div class="projects-grid">
         <!-- Project 1: redBond -->
         <div class="project-card reveal">
-          <div class="project-img" style="
-                background: linear-gradient(135deg, #1a0a0a 0%, #2a0e0e 100%);
-              ">
-            🩸
+          <div class="project-img" style="background: linear-gradient(135deg, #1a0a0a 0%, #2a0e0e 100%);">
+            <img src="assets/redbondlogo.png" width="160" height="160"/>
             <span class="project-img-label">MOBILE · ANDROID</span>
           </div>
           <div class="project-body">
@@ -395,19 +321,9 @@
               addressing emergency response delays in Bangladesh.
             </p>
             <ul class="project-bullets">
-              <li>
-                Led backend development in a team of 3; designed Firebase data
-                architecture for user profiles, blood requests, and donor
-                history.
-              </li>
-              <li>
-                Integrated Google Maps API to display nearby donors and blood
-                banks using geolocation filters.
-              </li>
-              <li>
-                Configured Firebase Auth and Firestore for secure
-                authentication and real-time database syncing.
-              </li>
+              <li>Led backend development in a team of 3; designed Firebase data architecture for user profiles, blood requests, and donor history.</li>
+              <li>Integrated Google Maps API to display nearby donors and blood banks using geolocation filters.</li>
+              <li>Configured Firebase Auth and Firestore for secure authentication and real-time database syncing.</li>
             </ul>
             <div class="project-stack">
               <span class="stack-tag">Java</span>
@@ -418,10 +334,7 @@
             </div>
             <div class="project-links">
               <a href="https://github.com/omarfaruk-k/" class="project-link" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
-                </svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
                 Source
               </a>
             </div>
@@ -430,10 +343,8 @@
 
         <!-- Project 2: Lost and Found -->
         <div class="project-card reveal" style="transition-delay: 0.1s">
-          <div class="project-img" style="
-                background: linear-gradient(135deg, #0a1020 0%, #0d1a2e 100%);
-              ">
-            🗺️
+          <div class="project-img" style="background: linear-gradient(135deg, #0a1020 0%, #0d1a2e 100%);">
+            <img src="assets/lost_n_found_text_white.png" width="160" height="160"/>
             <span class="project-img-label">MOBILE · CROSS-PLATFORM</span>
           </div>
           <div class="project-body">
@@ -443,19 +354,9 @@
               items through map-based search and real-time notifications.
             </p>
             <ul class="project-bullets">
-              <li>
-                Built Firebase backend handling item listings, user
-                submissions, and reporting workflow with structured NoSQL
-                schema.
-              </li>
-              <li>
-                Implemented Firebase Cloud Messaging for instant notifications
-                when matching lost items are found nearby.
-              </li>
-              <li>
-                Added location filters and item categorisation for efficient
-                search and post-discovery updates.
-              </li>
+              <li>Built Firebase backend handling item listings, user submissions, and reporting workflow with structured NoSQL schema.</li>
+              <li>Implemented Firebase Cloud Messaging for instant notifications when matching lost items are found nearby.</li>
+              <li>Added location filters and item categorisation for efficient search and post-discovery updates.</li>
             </ul>
             <div class="project-stack">
               <span class="stack-tag">Flutter</span>
@@ -466,10 +367,7 @@
             </div>
             <div class="project-links">
               <a href="https://github.com/omarfaruk-k/" class="project-link" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
-                </svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
                 Source
               </a>
             </div>
@@ -478,10 +376,8 @@
 
         <!-- Project 3: Summator -->
         <div class="project-card reveal" style="transition-delay: 0.2s">
-          <div class="project-img" style="
-                background: linear-gradient(135deg, #0a0a1a 0%, #0e0e2a 100%);
-              ">
-            🧮
+          <div class="project-img" style="background: linear-gradient(135deg, #0a0a1a 0%, #0e0e2a 100%);">
+            <img src="assets/SummatorWhite.png" width="120" height="120"/>
             <span class="project-img-label">MOBILE · ANDROID · LIVE</span>
           </div>
           <div class="project-body">
@@ -491,18 +387,9 @@
               skills through time-based summation rounds. Live on Android.
             </p>
             <ul class="project-bullets">
-              <li>
-                Designed difficulty progression logic and backend tracking to
-                record user performance and enable dynamic difficulty levels.
-              </li>
-              <li>
-                Used Firebase Auth and Firestore to manage user sessions,
-                score history, and game preferences securely.
-              </li>
-              <li>
-                Currently live on Android — iOS and web versions planned via
-                Flutter.
-              </li>
+              <li>Designed difficulty progression logic and backend tracking to record user performance and enable dynamic difficulty levels.</li>
+              <li>Used Firebase Auth and Firestore to manage user sessions, score history, and game preferences securely.</li>
+              <li>Currently live on Android — iOS and web versions planned via Flutter.</li>
             </ul>
             <div class="project-stack">
               <span class="stack-tag">Flutter</span>
@@ -512,31 +399,25 @@
             </div>
             <div class="project-links">
               <a href="https://github.com/omarfaruk-k/" class="project-link" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
-                </svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
                 Source
               </a>
               <a href="#" class="project-link">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                  <polyline points="15 3 21 3 21 9" />
-                  <line x1="10" y1="14" x2="21" y2="3" />
-                </svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                 Play Store
               </a>
             </div>
           </div>
         </div>
       </div>
+      
     </div>
   </section>
 
   <hr class="divider" />
 
   <!-- ============================================================
-       BLOG
+       BLOG  — bg: var(--bg)
   ============================================================ -->
   <section id="blog">
     <div class="container">
@@ -551,89 +432,60 @@
 
       <div class="blog-grid">
         <a class="blog-card reveal" href="https://dev.to/omarfaruk-k" target="_blank" rel="noopener">
-          <div class="blog-meta">
-            <span class="blog-category">Backend</span>
-            <span>dev.to</span>
-          </div>
-          <h3 class="blog-title">
-            Building REST APIs with Node.js &amp; Express
-          </h3>
-          <p class="blog-excerpt">
-            A practical walkthrough on designing clean, production-ready REST
-            APIs — covering routing, middleware, error handling, and Postman
-            testing.
-          </p>
+          <div class="blog-meta"><span class="blog-category">Backend</span><span>dev.to</span></div>
+          <h3 class="blog-title">Building REST APIs with Node.js &amp; Express</h3>
+          <p class="blog-excerpt">A practical walkthrough on designing clean, production-ready REST APIs — covering routing, middleware, error handling, and Postman testing.</p>
           <span class="blog-readmore">Read on dev.to →</span>
         </a>
 
-        <a class="blog-card reveal" href="https://omarfaruk-k.medium.com/" target="_blank" rel="noopener"
-          style="transition-delay: 0.1s">
-          <div class="blog-meta">
-            <span class="blog-category">Mobile</span>
-            <span>Medium</span>
-          </div>
-          <h3 class="blog-title">
-            Firebase vs Traditional Backend: When to Use What
-          </h3>
-          <p class="blog-excerpt">
-            A no-nonsense comparison of Firebase and traditional server
-            backends — when BaaS is the right call and when you need full
-            control.
-          </p>
+        <a class="blog-card reveal" href="https://omarfaruk-k.medium.com/" target="_blank" rel="noopener" style="transition-delay: 0.1s">
+          <div class="blog-meta"><span class="blog-category">Mobile</span><span>Medium</span></div>
+          <h3 class="blog-title">Firebase vs Traditional Backend: When to Use What</h3>
+          <p class="blog-excerpt">A no-nonsense comparison of Firebase and traditional server backends — when BaaS is the right call and when you need full control.</p>
           <span class="blog-readmore">Read on Medium →</span>
         </a>
 
-        <a class="blog-card reveal" href="https://dev.to/omarfaruk-k" target="_blank" rel="noopener"
-          style="transition-delay: 0.2s">
-          <div class="blog-meta">
-            <span class="blog-category">Flutter</span>
-            <span>dev.to</span>
-          </div>
-          <h3 class="blog-title">
-            Cross-Platform Mobile Dev with Flutter in 2025
-          </h3>
-          <p class="blog-excerpt">
-            Everything I've learned shipping Flutter apps — from state
-            management and navigation to Firebase integration and Play Store
-            deployment.
-          </p>
+        <a class="blog-card reveal" href="https://dev.to/omarfaruk-k" target="_blank" rel="noopener" style="transition-delay: 0.2s">
+          <div class="blog-meta"><span class="blog-category">Flutter</span><span>dev.to</span></div>
+          <h3 class="blog-title">Cross-Platform Mobile Dev with Flutter in 2025</h3>
+          <p class="blog-excerpt">Everything I've learned shipping Flutter apps — from state management and navigation to Firebase integration and Play Store deployment.</p>
           <span class="blog-readmore">Read on dev.to →</span>
         </a>
       </div>
-
-      <p class="blog-note">
+      
+      <div style="text-align: center; margin-top: 3rem;">
+  <a href="blog/blog-index.html" class="btn btn-outline">
+    View all posts
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+  </a>
+</div>
+      <!-- <p class="blog-note">
         More articles on
         <a href="https://dev.to/omarfaruk-k" target="_blank" rel="noopener">dev.to</a>
         and
         <a href="https://omarfaruk-k.medium.com/" target="_blank" rel="noopener">Medium</a>
         ↗
-      </p>
+      </p> -->
     </div>
   </section>
 
   <hr class="divider" />
 
   <!-- ============================================================
-       CONTACT
+       CONTACT  — bg: var(--bg2)
   ============================================================ -->
   <section id="contact">
     <div class="container">
       <div class="contact-wrap">
-        <!-- Left: info -->
         <div class="reveal">
           <div class="section-tag">Contact</div>
           <h2 class="section-title">Let's work<br /><em>together</em></h2>
           <p>
             Have a project in mind, want to collaborate, or just want to say
-            hi? I'm always open to interesting conversations and
-            opportunities.
+            hi? I'm always open to interesting conversations and opportunities.
           </p>
           <a class="contact-email" href="mailto:omarfaruk.k.cs@gmail.com">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-              <polyline points="22,6 12,13 2,6" />
-            </svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             omarfaruk.k.cs@gmail.com
           </a>
           <div class="about-merged-links">
@@ -643,25 +495,9 @@
             <a class="social-chip-icon" href="https://www.linkedin.com/in/omarfaruk-k/" target="_blank" rel="noopener">
               <i class="devicon-linkedin-plain"></i> LinkedIn
             </a>
-            <!-- <a class="social-chip-icon" href="https://dev.to/omarfaruk-k" target="_blank" rel="noopener">
-    <i class="devicon-devicon-plain"></i> dev.to
-  </a>
-  <a class="social-chip-icon" href="https://omarfaruk-k.medium.com/" target="_blank" rel="noopener">
-    <i class="devicon-google-plain"></i> Medium
-  </a> -->
           </div>
-          <!-- <div class="contact-socials">
-            <a class="social-chip" href="https://github.com/omarfaruk-k/" target="_blank" rel="noopener">GitHub</a>
-            <a class="social-chip" href="https://www.linkedin.com/in/omarfaruk-k/" target="_blank" rel="noopener">LinkedIn</a>
-            <a class="social-chip" href="https://dev.to/omarfaruk-k" target="_blank" rel="noopener">dev.to</a>
-            
-            
-            
-            
-          </div> -->
         </div>
 
-        <!-- Right: form -->
         <form class="reveal" style="transition-delay: 0.15s" id="contactForm">
           <div class="form-row">
             <div class="form-group">
@@ -679,19 +515,13 @@
           </div>
           <div class="form-group">
             <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Tell me about your project or just say hi..."
-              required></textarea>
+            <textarea id="message" name="message" placeholder="Tell me about your project or just say hi..." required></textarea>
           </div>
           <button type="submit" class="btn btn-primary" style="align-self: flex-start">
             Send Message
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <line x1="22" y1="2" x2="11" y2="13" />
-              <polygon points="22 2 15 22 11 13 2 9 22 2" />
-            </svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
           </button>
-          <div class="form-status" id="formStatus">
-            ✓ Message sent! I'll get back to you soon.
-          </div>
+          <div class="form-status" id="formStatus">✓ Message sent! I'll get back to you soon.</div>
         </form>
       </div>
     </div>
@@ -708,8 +538,6 @@
     </p>
   </footer>
 
-  <!-- Script -->
   <script src="script.js"></script>
 </body>
-
 </html>

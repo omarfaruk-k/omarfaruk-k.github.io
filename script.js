@@ -14,14 +14,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // Apply saved theme or default to dark
   const savedTheme = localStorage.getItem('theme') || 'dark';
   html.setAttribute('data-theme', savedTheme);
-  themeToggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+  themeToggle.textContent = savedTheme === 'dark' ? '☀︎' : '⏾';
 
   themeToggle.addEventListener('click', () => {
     const current = html.getAttribute('data-theme');
     const next    = current === 'dark' ? 'light' : 'dark';
     html.setAttribute('data-theme', next);
     localStorage.setItem('theme', next);
-    themeToggle.textContent = next === 'dark' ? '☀️' : '🌙';
+    themeToggle.textContent = next === 'dark' ? '☀︎' : '⏾';
   });
 
 
@@ -47,9 +47,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const progressBar = document.getElementById('progress-bar');
 
   window.addEventListener('scroll', () => {
-    const scrollTop   = document.documentElement.scrollTop;
+    const scrollTop    = document.documentElement.scrollTop;
     const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const progress    = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+    const progress     = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
     progressBar.style.width = progress + '%';
   }, { passive: true });
 
@@ -61,7 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        // Unobserve after reveal so it doesn't re-trigger
         revealObserver.unobserve(entry.target);
       }
     });
@@ -89,34 +88,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ----------------------------------------------------------
-     6. ACTIVE NAV LINK HIGHLIGHTING ON SCROLL
+     6. ACTIVE NAV LINK HIGHLIGHTING
+        - On the blog page: statically mark "blog" as active
+        - On the homepage: use scroll-based section detection
      ---------------------------------------------------------- */
-  const sections  = document.querySelectorAll('section[id]');
-  const navLinks  = document.querySelectorAll('.nav-links a');
+  const navLinks = document.querySelectorAll('.nav-links a');
 
-  const sectionObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const activeId = entry.target.id;
-        navLinks.forEach(link => {
-          const isActive = link.getAttribute('href') === '#' + activeId;
-          link.classList.toggle('active', isActive);
-        });
+  const isBlogPage = window.location.pathname.includes('blog-index.html')
+                  || window.location.pathname.includes('/blog/');
+
+  if (isBlogPage) {
+    // On the blog page — just mark the blog link active, no scroll detection
+    navLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      if (href && (href.includes('blog-index.html') || href === 'blog-index.html')) {
+        link.classList.add('active');
       }
     });
-  }, { threshold: 0.45 });
+  } else {
+    // On the homepage — scroll-based active detection
+    const sections = document.querySelectorAll('section[id]');
 
-  sections.forEach(s => sectionObserver.observe(s));
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const activeId = entry.target.id;
+          navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            // Match both #id and full URL ending in #id
+            const isActive = href === '#' + activeId || href === '/#' + activeId;
+            link.classList.toggle('active', isActive);
+          });
+        }
+      });
+    }, { threshold: 0.45 });
+
+    sections.forEach(s => sectionObserver.observe(s));
+  }
 
 
   /* ----------------------------------------------------------
      7. CONTACT FORM (demo — wire to Formspree or EmailJS in prod)
-
-     To enable real email sending:
-       1. Sign up at https://formspree.io (free)
-       2. Create a form and copy your endpoint
-       3. Replace the fetch URL below with your Formspree endpoint
-       4. Remove the setTimeout simulation block
      ---------------------------------------------------------- */
   const contactForm = document.getElementById('contactForm');
   const formStatus  = document.getElementById('formStatus');
@@ -128,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const submitBtn    = contactForm.querySelector('button[type="submit"]');
       const originalText = submitBtn.innerHTML;
 
-      submitBtn.disabled   = true;
+      submitBtn.disabled    = true;
       submitBtn.textContent = 'Sending...';
 
       /*
@@ -155,8 +167,8 @@ document.addEventListener('DOMContentLoaded', () => {
           formStatus.style.display = 'block';
           formStatus.textContent   = '✗ Network error. Please email me directly.';
         } finally {
-          submitBtn.disabled   = false;
-          submitBtn.innerHTML  = originalText;
+          submitBtn.disabled  = false;
+          submitBtn.innerHTML = originalText;
         }
       */
 
@@ -171,4 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+
+
+  
 });

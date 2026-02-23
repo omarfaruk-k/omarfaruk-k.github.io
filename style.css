@@ -140,10 +140,10 @@ nav {
 .theme-btn {
   background: transparent;
   border: 1px solid var(--border);
-  color: var(--muted);
+  color: var(--accent);
   width: 32px; height: 32px;
   border-radius: 6px;
-  font-size: 0.85rem;
+  font-size: 1.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -153,6 +153,7 @@ nav {
 
 .theme-btn:hover {
   background: var(--bg3);
+  border: 1px solid var(--accent);
   color: var(--text);
 }
 
@@ -291,6 +292,14 @@ hr.divider {
 .btn-outline:hover {
   border-color: var(--accent);
   color: var(--accent);
+}
+.hero-social-icon img {
+  filter: brightness(0) invert(0.7);
+  transition: filter 0.2s;
+}
+
+.hero-social-icon:hover img {
+  filter: brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(130deg);
 }
 
 /* ============================================================
@@ -445,7 +454,14 @@ hr.divider {
 .hero-social-icon svg {
   width: 30px; height: 30px;
 }
+.hero-social-icon img {
+  filter: brightness(0) invert(0.7);
+  transition: filter 0.2s;
+}
 
+.hero-social-icon:hover img {
+  filter: brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(130deg);
+}
 .hero-social-icon:hover {
   border-color: var(--accent);
   color: var(--accent);
@@ -724,7 +740,7 @@ hr.divider {
   margin: 3.5rem 0 2.5rem;
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.68rem;
-  color: var(--muted);
+  color: var(--accentLight);
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
@@ -733,7 +749,7 @@ hr.divider {
   content: '';
   flex: 1;
   height: 1px;
-  background: var(--border);
+  background: var(--muted);
 }
 
 /* ============================================================
@@ -1097,3 +1113,5 @@ footer a:hover { text-decoration: underline; }
   .projects-grid { grid-template-columns: 1fr; }
   .blog-grid     { grid-template-columns: 1fr; }
 }
+
+
