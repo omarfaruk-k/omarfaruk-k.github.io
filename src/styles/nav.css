@@ -95,6 +95,7 @@ nav {
   font-family: var(--font-mono);
   white-space: nowrap;     
   transition: background 0.2s;
+  width: auto;
 }
 .theme-btn:hover { background: rgba(0,229,192,0.08); }
 

@@ -3,6 +3,8 @@ import { blogPosts, getPostBySlug } from '../data/blog'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 import '../styles/blog.css'
+import { useEffect } from 'react'
+
 
 // Renders a single content block
 function ContentBlock({ block }) {
@@ -27,6 +29,10 @@ export default function BlogPost() {
   const { slug } = useParams()
   const navigate = useNavigate()
   const post = getPostBySlug(slug)
+
+  useEffect(() => {
+  window.scrollTo(0, 0)
+}, [])
 
   if (!post) {
     return (
